@@ -27,7 +27,7 @@
         <li>bootstrap : </li>
         <li>HTML5 </li>
         <li>CSS3 </li>
-        <li>JavaScript2 :  </li>
+        <li>JavaScript :  </li>
         <li>TypeScript :  </li>
         <li>React :  </li>
        
