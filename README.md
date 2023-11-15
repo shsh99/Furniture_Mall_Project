@@ -28,7 +28,7 @@
     <summary>⚡️ FE 자세히 살펴보기</summary>
     <br>
     <ul>
-        <li>bootstrap : </li>
+        <li>bootstrap : 5.2 </li>
         <li>HTML5 </li>
         <li>CSS3 </li>
         <li>JavaScript :  </li>
@@ -46,9 +46,10 @@
       <summary>⚡️ BE 자세히 살펴보기</summary>
       <br>
       <ul>
-          <li>springboot :  </li>
+          <li>springboot : 2.7.17  </li>
           <li>SQL : </li>
-          <li>jdk :  </li>
+          <li>jdk : 11.0.20  </li>
+          <li>java : 11  </li>
 <!--           <li>lombok </li>
           <li>MyBatis </li> -->
           <li>JSP </li>
