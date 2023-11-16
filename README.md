@@ -121,7 +121,7 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 
 <br>
 
-## 5️⃣ SiteMap
+## 5️⃣ SiteMap & WireFrame
 
 <br>
 
