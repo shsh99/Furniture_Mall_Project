@@ -10,9 +10,9 @@
 - ***모든 팀원이 풀스택으로 개발에 참여했으며, 주 포지션은 아래와 같습니다.***
 <br>
 
-|   Name   |(팀장) 신동구  | 도권재 | 송기동 | 박완수 | 이대훈 | 조규보 |
+|   Name   |(팀장) 신동구  | 도권재 | 송기동 | 이대훈 | 박완수 | 조규보 |
 | :------: | --- | --- | --- | --- | --- |--- |
-| **Position** | 기능 |  기능 |  기능 | 기능 | 기능 | 기능 |
+| **Position** |상품 CRUD, 제품상세페이지 기능 |장바구니 crud, 상품 문의, 찜 기능 |결제, 로그인/회원가입 기능 |공지사항, QNA, 로그인/회원가입, 쿠폰발급 기능 |카테고리 지정, 주문 CRUD 기능 |이미지 파일 DB에 저장, 주문 CRUD 기능 |
 
 
 - **프로젝트 기간 : 2023년 11월 00일 ~ 2023년 12월 00일**
@@ -114,7 +114,7 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 <br>
 
 ## 4️⃣ ERD & 테이블 명세서
-테이블 명세서 :
+테이블 명세서 : https://docs.google.com/spreadsheets/d/1zpjjtAKGhq-PrGZjYdW3FrDrXBLRjHzK8iVUpqgpsR0/edit?usp=sharing
 
 ![image](https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/ae601dec-dac0-4344-8d40-7d8d54467404)
 
