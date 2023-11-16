@@ -116,7 +116,7 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 ## 4️⃣ ERD & 테이블 명세서
 테이블 명세서 :
 
-![image](https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/d0e72891-35be-4727-80d8-71672a2005e5)
+![image](https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/ae601dec-dac0-4344-8d40-7d8d54467404)
 
 <br>
 
