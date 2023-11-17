@@ -1,0 +1,12 @@
+eco_high = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=gc5f117f00454d1_eco_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+eco_low = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=gc5f117f00454d1_eco_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+eco_medium = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=gc5f117f00454d1_eco_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+eco_tp = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=gc5f117f00454d1_eco_tp.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+eco_tpurgent = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=gc5f117f00454d1_eco_tpurgent.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+
+
