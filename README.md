@@ -108,7 +108,7 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 
 #### 공통 페이지
 
-- 대충 이런식으로 진행될 것
+- 대충 이런식으로 진행될 것것것것
 
 
 <br>
@@ -123,6 +123,18 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 
 ## 5️⃣ SiteMap & WireFrame
 
+<table>
+<tr>
+ <td> <b>고객</b></td>
+ <td> <b>매니저</b></td>
+ </tr>
+<tr>
+<td><img src="https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/7fa1b7e8-92e9-4b48-a465-645e02d84e1c"
+        ></td>
+<td><img src="https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/d8a42127-feed-4696-a252-ccb1661669b1"
+></td>
+</tr>
+</table>
 <br>
 
 ## 6️⃣ 주요 기능
@@ -181,7 +193,6 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 #### 회원 관리
 -
 
-안녕
 #### 상품 관리
 - 상품 CRUD
 - 상품 이미지 등록
