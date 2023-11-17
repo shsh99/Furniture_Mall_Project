@@ -1,0 +1,15 @@
+로그인 
+
+벡엔드
+HELP.md 옮겨넣기
+build.gradle 수정
+application.properties 수정
+ERole.java 생성
+User.java 생성
+UserRepository.java 생성
+UserService.java
+
+security.zip 다운받아서 com.example.simpledms에 넣기
+auth.zip 다운받아서 model - dto에 넣기
+WebSecurityConfig.java 다운받아서 com.example.simpledms 에 넣기
+AuthController.java 생성
