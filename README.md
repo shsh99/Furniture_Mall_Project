@@ -122,10 +122,19 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 <br>
 
 ## 5️⃣ SiteMap & WireFrame
-![image](https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/4b2ee70b-ef0c-46fe-b11c-ec97e1689728)
 
-![image](https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/64642c06-c3e4-4d14-b28e-8b8e95e23397)
-
+<table>
+<tr>
+ <td>**고객**</td>
+ <td>**매니저**</td>
+ </tr>
+<tr>
+<td><img src="https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/7fa1b7e8-92e9-4b48-a465-645e02d84e1c"
+        ></td>
+<td><img src="https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/d8a42127-feed-4696-a252-ccb1661669b1"
+></td>
+</tr>
+</table>
 <br>
 
 ## 6️⃣ 주요 기능
