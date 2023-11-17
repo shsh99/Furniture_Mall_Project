@@ -179,9 +179,9 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 ## 8️⃣ 기능 - 관리자
 
 #### 회원 관리
-안녕하세요
 -
 
+안녕
 #### 상품 관리
 - 상품 CRUD
 - 상품 이미지 등록
