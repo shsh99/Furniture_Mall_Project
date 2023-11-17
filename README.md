@@ -115,7 +115,6 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 
 ## 4️⃣ ERD & 테이블 명세서
 #### 테이블 명세서 : https://docs.google.com/spreadsheets/d/1zpjjtAKGhq-PrGZjYdW3FrDrXBLRjHzK8iVUpqgpsR0/edit?usp=sharing
-![image](https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/fccd3bc5-6b20-43d5-864c-64a1879d8324)
 
 ![image](https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/993b9038-335d-465f-b4d3-aeaf0915e5b9)
 
@@ -123,7 +122,8 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 <br>
 
 ## 5️⃣ SiteMap & WireFrame
-![image](https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/fd7af532-3edf-4eac-be71-13e4f4a5ba80)
+![image](https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/4b2ee70b-ef0c-46fe-b11c-ec97e1689728)
+
 ![image](https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/64642c06-c3e4-4d14-b28e-8b8e95e23397)
 
 <br>
