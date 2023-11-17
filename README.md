@@ -125,8 +125,8 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 
 <table>
 <tr>
- <td>**고객**</td>
- <td>**매니저**</td>
+ <td> <b>고객</b></td>
+ <td> <b>매니저</b></td>
  </tr>
 <tr>
 <td><img src="https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/7fa1b7e8-92e9-4b48-a465-645e02d84e1c"
