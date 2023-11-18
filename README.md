@@ -15,7 +15,7 @@
 | **Position** |상품 CRUD, 제품상세페이지 기능 |장바구니 crud, 상품 문의, 찜 기능 |결제, 로그인/회원가입 기능 |공지사항, QNA, 로그인/회원가입, 쿠폰발급 기능 |카테고리 지정, 주문 CRUD 기능 |이미지 파일 DB에 저장, 주문 CRUD 기능 |
 
 
-- **프로젝트 기간 : 2023년 11월 00일 ~ 2023년 12월 00일**
+- **프로젝트 기간 : 2023년 11월 15일 ~ 2023년 12월 04일**
 
 
 <br>
@@ -123,6 +123,7 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 
 ## 5️⃣ SiteMap & WireFrame
 
+#### 사이트 맵
 <table>
 <tr>
  <td> <b>고객</b></td>
@@ -135,6 +136,9 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 ></td>
 </tr>
 </table>
+
+#### 와이어 프레임
+
 <br>
 
 ## 6️⃣ 주요 기능
