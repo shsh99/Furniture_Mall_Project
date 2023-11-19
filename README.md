@@ -3,7 +3,8 @@
 
 
 
-가구 쇼핑몰 웹 개발 팀 프로젝트 
+## 가구 쇼핑몰 웹 개발 팀 프로젝트 
+
 <br>
 
 ## 🚀 프로젝트 개요
@@ -28,7 +29,7 @@
     <summary>⚡️ FE 자세히 살펴보기</summary>
     <br>
     <ul>
-        <li>bootstrap : 5.2 </li>
+        <li>bootstrap : 5.0 </li>
         <li>HTML5 </li>
         <li>CSS3 </li>
         <li>JavaScript :  </li>
