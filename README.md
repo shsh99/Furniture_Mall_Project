@@ -97,7 +97,7 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 
 ## 2️⃣ 프로젝트 개요
 - 배운것을 최대한 활용할 수 있는 주제를 고르다가 쇼핑몰 웹 사이트를 구현하면 배운 기술들을 모두 활용할 수 있을 것 같아서 주제로 선정
-- 얄라리얄라성
+- 
 
 <br>
 
@@ -109,7 +109,7 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 
 #### 공통 페이지
 
-- 대충 이런식으로 진행될 것것것것
+- 대충 이런식으로 진행될 것 입니다
 
 
 <br>
