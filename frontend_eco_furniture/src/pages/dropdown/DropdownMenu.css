@@ -1,0 +1,32 @@
+.menu-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.menu-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.menu-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.drop {
+    list-style-type: none;
+    margin-left: -35px;
+}
+
+.button {
+    color: #fff;
+    border: none;
+    background-color: transparent;
+}

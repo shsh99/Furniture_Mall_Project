@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>React App</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- 검색창 아이콘 & 닫기 아이콘 표시 숨기기  -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <title>Search</title>
+      <path fill="currentColor"
+        d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="close" viewBox="0 0 16 16">
+      <path
+        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+    </symbol>
+  </svg>
+
+  <!-- 검색창 기능 있는 프론트에서 들고온 js -->
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/plugins.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <!-- 눈 -->
+  <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+
+  <script>
+    var sf = new Snowflakes({
+      color: "#ffffff",
+      // Default: "#5ECDEF"
+
+      // container: document.querySelector('#hz'), // Default: document.body
+
+      // count: 50, // 100 snowflakes. Default: 50
+
+      // minOpacity: 0.1, // From 0 to 1. Default: 0.6
+
+      // maxOpacity: 0.95, // From 0 to 1. Default: 1
+
+      // minSize: 5, // Default: 10
+
+      // maxSize: 15, // Default: 25
+
+      // rotation: true, // Default: true
+
+      // speed: 0.3, // 낙하속도 Default: 1
+
+      // wind: false, // 바람 유무 Default: true
+
+      // width: 100, // Default: container 너비
+
+      // height: 100, // Default: container 높이
+
+      // zIndex: 100 // Default: 9999
+    });
+  </script>
+</body>
+
+</html>
