@@ -3,20 +3,19 @@ import initCustom from "../../assets/js/custom";
 import { Link } from "react-router-dom";
 import initSearch from "../../assets/js/script";
 import { SideBar } from "../../pages/side/Sidebar";
-import DropdownMenu from "../../pages/dropdown/DropdownMenu";
+import DropdownMenu from '../../pages/dropdown/DropdownMenu';
 import DropdownMenu2 from "../../pages/dropdown/DropdownMenu2";
 import DropdownMenu3 from "../../pages/dropdown/DropdownMenu3";
 
-function HeaderCom() {
-  // TODO: 로그인 변수 정의
-  // 공유저장소 변수 가져오기
-  // auth = { isLoggedIn:true/false, user:user/null };
-  // const { user: currentUser } = useSelector((state: RootState) => state.auth);
 
+
+
+function HeaderCom() {
   useEffect(() => {
     initCustom();
     initSearch();
   });
+
 
   const handleSubMenuClick = () => {
     console.log("HeaderCom - 모든 제품 클릭");
@@ -62,8 +61,11 @@ function HeaderCom() {
             Eco Furniture<span>.</span>
           </Link>
 
+
           <div className="collapse navbar-collapse" id="navbarsFurni">
+
             <ul className="custom-navbar-nav navbar-nav ms-auto">
+
               <li className="nav-item">
                 <a className="nav-link text-center">
                   <DropdownMenu />
@@ -97,78 +99,31 @@ function HeaderCom() {
               </ul>
             </div>
           </div>
-          {/* TODO: 로그인&회원가입, 로그아웃 start */}
-
-          {/* 로그인 시작 */}
-
-          {/* {!currentUser && ( */}
-          <>
-            <ul className="custom-navbar-cta navbar-nav ms-auto mb-2 mb-md-2 mb-md-0">
-              <li className="nav-item">
-                <a className="nav-link active" href="/register">
-                  회원가입
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link active" href="/login">
-                  로그인
-                </a>
-              </li>
-            </ul>
-          </>
-          {/* )} */}
-          {/* 로그인 끝 */}
-
-          {/* 로그인&회원가입, 로그아웃 end */}
         </div>
-      </nav>
-
-      <nav
-        className="navbar navbar-expand-lg bg-dark navbar-light"
-        id="templatemo_nav_top"
-      >
+      </nav >
+      <nav className="navbar navbar-expand-lg bg-dark navbar-light" id="templatemo_nav_top">
         <div className="container text-light d-flex justify-content-center">
           <div className="w-md-50 d-flex justify-content-between align-items-center">
+
             <div className="d-flex align-items-center">
               <i className="fa fa-envelope mx-2"></i>
-              <a
-                className="navbar-sm-brand text-light text-decoration-none "
-                href=""
-              >
-                eco@company.com
-              </a>
+              <a className="navbar-sm-brand text-light text-decoration-none " href="">eco@company.com</a>
             </div>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
             <div className="d-flex align-items-center">
               <i className="fa fa-tree mx-2"></i>
-              <a
-                className="navbar-sm-brand text-light text-decoration-none "
-                href=""
-              >
-                크리스마스 특별 세일
-              </a>
+              <a className="navbar-sm-brand text-light text-decoration-none " href="">크리스마스 특별 세일</a>
             </div>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
             <div className="d-flex align-items-center">
               <i className="fa fa-phone mx-2"></i>
-              <a
-                className="navbar-sm-brand text-light text-decoration-none"
-                href=""
-              >
-                쉽고 편한 전화 주문, 콜 오더
-              </a>
+              <a className="navbar-sm-brand text-light text-decoration-none" href="">쉽고 편한 전화 주문, 콜 오더</a>
             </div>
           </div>
+
         </div>
         <div>
-          <a
-            className="text-light"
-            href="https://github.com/shsh99/Furniture_Mall_Project"
-            target="_blank"
-            rel="sponsored"
-          >
-            <i className="fab fa-github fa-sm fa-fw me-2"></i>
-          </a>
+          <a className="text-light" href="https://github.com/shsh99/Furniture_Mall_Project" target="_blank" rel="sponsored"><i className="fab fa-github fa-sm fa-fw me-2"></i></a>
         </div>
       </nav>
     </>
