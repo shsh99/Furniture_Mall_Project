@@ -1,0 +1,64 @@
+﻿.bg-login-image {
+    background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-register-image {
+    background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-password-image {
+    background: url("https://source.unsplash.com/oWTW-jNGl9I/600x800");
+    background-position: center;
+    background-size: cover;
+}
+
+.form-control-user,
+.btn-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    padding: 1.5rem 1rem;
+}
+
+.btn-google {
+    color: #fff;
+    background-color: #ea4335;
+    border-color: #fff;
+}
+
+.btn-google:hover {
+    color: #fff;
+    background-color: #e12717;
+    border-color: #e6e6e6;
+}
+
+.btn-naver {
+    color: #fff;
+    background-color: #6B8E23;
+    border-color: #fff;
+}
+
+.btn-naver:hover {
+    color: #fff;
+    background-color: #556B2F;
+    border-color: #e6e6e6;
+}
+
+.btn-kakao {
+    color: #fff;
+    background-color: #DAA520;
+    border-color: #fff;
+}
+
+.btn-kakao:hover {
+    color: #fff;
+    background-color: #B8860B;
+    border-color: #e6e6e6;
+}
