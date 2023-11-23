@@ -245,6 +245,19 @@ a.more {
   margin-bottom: 30px;
 }
 
+.bestt {
+  font-size: 3rem;
+  /* 필요에 따라 조절 가능한 텍스트 크기 */
+  width: 100%;
+  /* 너비를 화면에 맞게 설정 */
+  overflow: hidden;
+  /* 넘치는 부분 숨기기 */
+  /* white-space: nowrap; */
+  /* 한 줄로만 표시하도록 설정 */
+  text-overflow: ellipsis;
+  /* 넘치는 부분에 대한 대체 표시 (...) */
+}
+
 @media (min-width: 1400px) {
   .hero h1 {
     font-size: 54px;

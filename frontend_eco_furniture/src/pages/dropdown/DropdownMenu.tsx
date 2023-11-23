@@ -36,11 +36,13 @@ function DropdownMenu() {
           <li><a className="nav-link" href='/best-item'>베스트</a></li>
           <li><a className="nav-link" href='/promotion'>프로모션</a></li>
           <li><a className="nav-link" href='/interior-item'>인테리어 소품</a></li>
-          <li><a className="nav-link" href="/chair">의자</a></li>
-          <li><a className="nav-link" href="/table">테이블</a></li>
+          <li><a className="nav-link" href="/chair">테이블</a></li>
+          <li><a className="nav-link" href="/table">의자</a></li>
         </ul>
       </CSSTransition>
     </div>
+
+
   );
 }
 

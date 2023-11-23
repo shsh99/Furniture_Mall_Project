@@ -15,22 +15,39 @@ function Home() {
 			{/* <!-- Start Product Section --> */}
 			<div className="hero">
 				<div className="container">
-					<div className="d-flex row justify-content-between">
-						<div className="col-lg-5">
-							<div className="intro-excerpt mt-5">
-								<h1>베스트 카테고리 쇼핑하기</h1>
+					<div className="product-section">
+						<div className="container d-flex justify-content-center" >
+							<div className="ml-3" >
+								<div className="card-body" style={{ maxWidth: '400px', height: 'auto' }}>
+									<h3 className="card-title ml-3 mr-3" style={{ fontWeight: 'bold', color: 'black', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }} >나만의 가장 완벽한 크리스마스</h3>
 
-								<div className="d-flex mt-5">
-
-									<h2>친환경 소재만을 엄선해 제작한 가구</h2>
-
-
+									<div className="card-body mt-3" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+										<img src="images/santa.jpg" className="card-img-top" alt="..." style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
+									</div>
+									<div className="card-body mt-3" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+										<img src="images/citem2.jpg" className="card-img-top" alt="..." style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
+									</div>
 								</div>
-
-
 							</div>
+							<div className="ml-3" style={{ maxWidth: '400px' }}>
+								<img src="images/christmas.jpg" className="card-img-top" alt="..." style={{ width: '100%', height: 'auto' }} />
+								<p className="card-text mt-3" style={{
+									fontWeight: 'bold',
+									color: 'black', textOverflow: 'ellipsis'
+								}}>
+									우리 집에서 열리는 화려한 북유럽의 크리스마스 마켓!<br />  스칸디나비아 전통문화와 수공예에서 영감을 얻은 새로운 겨울 컬렉션으로 나만의 크리스마스를 준비해 보세요.
+								</p>
+							</div>
+
 						</div>
-						<div className="product-section">
+
+					</div>
+					<div className="d-flex row justify-content-between">
+						<div className="col-lg-10">
+							<h1 className="bestt">베스트 카테고리 쇼핑하기</h1>
+
+						</div>
+						<div className="product-section mb-5">
 							<div className="container">
 								<div className="row">
 									{/* <!-- Start Column 1 --> */}
@@ -233,7 +250,7 @@ function Home() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div >
 
 			{/* <!-- End Product Section --> */}
 
@@ -242,7 +259,7 @@ function Home() {
 				<div className="container">
 					<div className="row justify-content-between">
 						<div className="col-lg-6">
-							<h2 className="section-title">Eco Furniture를 선택하는 이유!</h2>
+							<h2 className="section-title">진행중인 이벤트 및 프로모션</h2>
 							<p>
 								저희 Eco Furniture는 친환경 소재로 만든 가구와 인테리어 소품을
 								사용합니다!
