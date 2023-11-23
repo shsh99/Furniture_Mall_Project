@@ -34,6 +34,16 @@ npm install @types/styled-components --save-dev
 # 7-2) 리액트 아이콘 npm
 npm install react-icons --save
 
+# TODO:8) 로그인 관련/공유라이브러리 리덕스-툴킷 설치
+npm i react-redux @reduxjs/toolkit
+
+# TODO:) 로그인 관련/폼 유효성 체크 라이브러리 설치
+# TODO:8-2) formik
+npm i formik
+
+# TODO:8-3) 로그인 관련/yup
+npm i yup
+npm i @types/yup
 
 <!-- 참고 -->
 # * 외부 라이브러리 타입이 없을 경우 처리 : 타입 설정
