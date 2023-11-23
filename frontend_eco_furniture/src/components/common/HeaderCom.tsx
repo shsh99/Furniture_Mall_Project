@@ -112,7 +112,7 @@ function HeaderCom() {
             &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
             <div className="d-flex align-items-center">
               <i className="fa fa-tree mx-2"></i>
-              <a className="navbar-sm-brand text-light text-decoration-none " href="">크리스마스 특별 세일</a>
+              <a className="navbar-sm-brand text-light text-decoration-none " href="/promotion">크리스마스 특별 세일</a>
             </div>
             &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
             <div className="d-flex align-items-center">
