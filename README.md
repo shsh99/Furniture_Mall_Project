@@ -109,7 +109,7 @@ src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=w
 
 #### 공통 페이지
 
-- 대충 이런식으로 진행될 것 입니다
+- 대충 이런식으로 진행될 것 입니다- 대충 이런식으로 진행될 것 입니다
 
 
 <br>
