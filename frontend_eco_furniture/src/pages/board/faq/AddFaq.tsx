@@ -1,21 +1,20 @@
+// AddFaq.tsx
 import React from "react";
 import { useState } from "react";
 import IFaq from "../../../types/board/faq/IFaq";
 import FaqService from "../../../service/board/faq/FaqService";
 import { useNavigate } from "react-router-dom";
 
-
 function AddFaq() {
-  
   // TODO: 변수 정의
   const initialFaq = {
     faqNo: null,
 
     faqTitle: "",
 
-    faqContents: ""
+    faqContents: "",
   };
-  
+
   // 강제페이지 이동 함수
   let navigate = useNavigate();
 
@@ -35,7 +34,7 @@ function AddFaq() {
     // 임시 객체
     var data = {
       faqTitle: faq.faqTitle,
-        faqContents: faq.faqContents
+      faqContents: faq.faqContents,
     };
 
     FaqService.create(data) // 저장 요청
@@ -43,7 +42,7 @@ function AddFaq() {
         setSubmitted(true);
         console.log(response.data);
         alert("저장되었습니다.");
-        navigate("/faq"); // 페이지 이동  
+        navigate("/faq"); // 페이지 이동
       })
       .catch((e: Error) => {
         console.log(e);
@@ -59,8 +58,24 @@ function AddFaq() {
 
   return (
     // TODO: JSX
-    <div className="row">
-      {/* {submitted ? (
+    <>
+      <div className="hero">
+        <div className="container">
+          <div className="d-flex row justify-content-between">
+            <div className="col-lg-10">
+              <div className="mt-5">
+                <h1 className="bestt">자주 묻는 질문 추가하기</h1>
+
+                <div className="d-flex mt-5">
+                  <h2>관리자용 페이지입니다.</h2>
+                </div>
+              </div>
+            </div>
+            <div className="product-section">
+              <div className="container">
+                <div className="row">
+                  <div className="row">
+                    {/* {submitted ? (
         <div className="col-6 mx-auto">
           <h4>저장이 완료되었습니다.</h4>
           <button className="btn btn-success" onClick={newFaq}>
@@ -68,62 +83,74 @@ function AddFaq() {
           </button>
         </div>
       ) : ( */}
-        <>
+                    <>
+                      <div className="col-6 mx-auto">
+                        <div className="row g-3 align-items-center mb-3">
+                          <div className="col-3">
+                            <label
+                              htmlFor="faqTitle"
+                              className="col-form-label"
+                            >
+                              제목
+                            </label>
+                          </div>
 
-          <div className="col-6 mx-auto">
-            <div className="row g-3 align-items-center mb-3">
-              <div className="col-3">
-                <label htmlFor="faqTitle" className="col-form-label">
-                  제목
-                </label>
-              </div>
+                          <div className="col-9">
+                            <input
+                              type="text"
+                              id="faqTitle"
+                              required
+                              className="form-control"
+                              value={faq.faqTitle}
+                              onChange={handleInputChange}
+                              placeholder="제목을 입력해 주세요."
+                              name="faqTitle"
+                            />
+                          </div>
+                        </div>
 
-              <div className="col-9">
-                <input
-                  type="text"
-                  id="faqTitle"
-                  required
-                  className="form-control"
-                  value={faq.faqTitle}
-                  onChange={handleInputChange}
-                  placeholder="제목을 입력해 주세요."
-                  name="faqTitle"
-                />
-              </div>
-            </div>
+                        <div className="row g-3 align-items-center mb-3">
+                          <div className="col-3">
+                            <label
+                              htmlFor="faqContents"
+                              className="col-form-label"
+                            >
+                              내용
+                            </label>
+                          </div>
+                          <div className="col-9">
+                            <input
+                              type="text"
+                              id="faqContents"
+                              required
+                              className="form-control"
+                              value={faq.faqContents}
+                              onChange={handleInputChange}
+                              placeholder="내용을 입력해 주세요."
+                              name="faqContents"
+                            />
+                          </div>
+                        </div>
 
-            <div className="row g-3 align-items-center mb-3">
-              <div className="col-3">
-                <label htmlFor="faqContents" className="col-form-label">
-                  내용
-                </label>
+                        <div className="row g-3 mt-3 mb-3">
+                          <button
+                            onClick={saveFaq}
+                            className="btn btn-outline-primary ms-2 col"
+                          >
+                            저장하기
+                          </button>
+                        </div>
+                      </div>
+                    </>
+                    {/* )} */}
+                  </div>
+                </div>
               </div>
-              <div className="col-9">
-                <input
-                  type="text"
-                  id="faqContents"
-                  required
-                  className="form-control"
-                  value={faq.faqContents}
-                  onChange={handleInputChange}
-                  placeholder="내용을 입력해 주세요."
-                  name="faqContents"
-                />
-              </div>
-            </div>
-
-            <div className="row g-3 mt-3 mb-3">
-              <button
-                onClick={saveFaq}
-                className="btn btn-outline-primary ms-2 col"
-              >
-                저장하기
-              </button>
             </div>
           </div>
-        </>
-      {/* )} */}
-    </div>
+        </div>
+      </div>
+    </>
   );
 }
 

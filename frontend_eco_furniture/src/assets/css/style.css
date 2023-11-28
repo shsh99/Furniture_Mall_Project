@@ -6,6 +6,78 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
+
+/* 모달 스타일링(거실 침실) */
+.room-modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
+.room-modal-content {
+  margin: 5% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+
+/* 모달 스타일링(거실 침실) 끝 */
+
+/* 별점 */
+#myform fieldset{
+  display: inline-block;
+  direction: rtl;
+  border:0;
+}
+#myform fieldset legend{
+  text-align: right;
+}
+#myform input[type=radio]{
+  display: none;
+}
+#myform label{
+  font-size: 3em;
+  color: transparent;
+  text-shadow: 0 0 0 #f0f0f0;
+}
+#myform label:hover{
+  text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+#myform label:hover ~ label{
+  text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+#myform input[type=radio]:checked ~ label{
+  text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+#reviewContents {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: solid 1.5px #D3D3D3;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+}
+
+/* 별점 끝 */
+
+/* 모달 */
+.modal {
+  height: 100% !important;
+}
+/* 모달 끝 */
+
+
 /*  Search  */
 .search-box {
   background: var(--bs-light);
@@ -40,7 +112,66 @@
   margin-left: -50px;
 }
 
+/*  Search 끝  */
+
+/* owl-carousel */
+.owl-dots {
+  display: none;
+}
+
+.owl-item img {
+  height: 40px;
+}
+
+.customPrevBtn,
+.customNextBtn {
+  background: none;
+  border: none;
+  color: #999999;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+@media(max-width:768px) {
+
+  .pbPrevBtn,
+  .pbNextBtn {
+    display: none;
+  }
+}
+
+/* owl-carousel 끝 */
+
 /* carousel */
+.slide1 {
+  width: 800px;
+}
+
+.owl-carousel {
+  width: 100%;
+}
+
+.owl-dots {
+  display: none;
+}
+
+.owl-item img {
+  height: 300px;
+}
+
+.customPrevBtn,
+.customNextBtn {
+  background: none;
+  border: none;
+  color: #999999;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: #000;

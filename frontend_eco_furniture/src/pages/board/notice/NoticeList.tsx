@@ -81,7 +81,7 @@ function NoticeList() {
 											href="/faq"
 											className="btn btn-bl-outline mb-4"
 										>
-											자주 묻는 질문 (FAQ)
+											자주묻는질문 바로가기
 										</a>
 									</div>
 								</p>
@@ -106,7 +106,150 @@ function NoticeList() {
 			</div>
 			{/* <!-- Hero Section TODO: End notice Section --> */}
 
-			{/* <!-- End Faq Section --> */}
+			{/* <!-- notice Section start --> */}
+			<div className="untree_co-section">
+				<div className="container">
+					<div>
+						{/* notice search start */}
+						<div className="row mb-5 justify-content-center">
+							<div className="col-12 w-50 input-group mb-3">
+								<input
+									type="text"
+									className="form-control"
+									placeholder="Search by title"
+									value={searchNoticeTitle}
+									onChange={onChangeSearchNoticeTitle}
+								/>
+
+								<div className="input-group-append">
+									<button
+										className="btn btn-outline-secondary"
+										type="button"
+										onClick={retrieveNotice}
+									>
+										검색하기
+									</button>
+									<a
+										href="/add-notice"
+										className="btn btn-secondary"
+									>
+										글쓰기
+									</a>
+								</div>
+							</div>
+						</div>
+						{/* notice search end */}
+
+						{/* Items per Page start */}
+						{'Items per Page: '}
+						<select
+							onChange={handlePageSizeChange}
+							value={pageSize}
+						>
+							{pageSizes.map((size) => (
+								<option key={size} value={size}>
+									{size}
+								</option>
+							))}
+						</select>
+						{/* Items per Page end */}
+
+						{/* accodian start(반복문) */}
+						<div className="col-md-12">
+							<div className="accordion" id="accordionExample">
+								{/* 반복문 사용법 : notice.map((data, index) => (아코디언 태그)) */}
+								{notice &&
+									notice.map((data, index) => (
+										<div
+											className="accordion-item"
+											key={data.noticeNo}
+										>
+											<h2
+												className="accordion-header"
+												id={'heading' + index}
+											>
+												<button
+													className={
+														index == 0
+															? 'accordion-button'
+															: 'accordion-button collapsed'
+													}
+													type="button"
+													data-bs-toggle="collapse"
+													data-bs-target={
+														'#collapse' + index
+													}
+													aria-expanded={
+														index == 0
+															? 'true'
+															: 'false'
+													}
+													aria-controls={
+														'collapse' + index
+													}
+												>
+													{/* 벡엔드 데이터 */}
+													{data.noticeTitle}
+												</button>
+											</h2>
+											{/* 제목(data.noticeTitle) 끝 */}
+
+											{/* 본문(data.content) 시작 */}
+											<div
+												id={'collapse' + index}
+												className={
+													index == 0
+														? 'accordion-collapse collapse show'
+														: 'accordion-collapse collapse'
+												}
+												aria-labelledby={
+													'heading' + index
+												}
+												data-bs-parent="#accordionExample"
+											>
+												<div className="accordion-body">
+													{/* 벡엔드 데이터 코딩 */}
+													{data.noticeContents} &nbsp;
+													<Link
+														to={
+															'/notice/' +
+															data.noticeNo
+														}
+													>
+														<span className="badge bg-success">
+															수정하기
+														</span>
+													</Link>
+												</div>
+											</div>
+											{/* 본문 끝 */}
+										</div>
+									))}
+							</div>
+							{/* notice search end */}
+
+							{/* Pagination start */}
+							<div className="pagination justify-content-center">
+								<Pagination
+									className="my-3"
+									count={count}
+									page={page}
+									siblingCount={1}
+									boundaryCount={1}
+									variant="outlined"
+									shape="rounded"
+									onChange={handlePageChange}
+								/>
+							</div>
+							{/* Pagination end */}
+						</div>
+
+						{/* accodian end */}
+					</div>
+					<div className="row"></div>
+				</div>
+			</div>
+			{/* <!-- notice Section end --> */}
 		</>
 	);
 }
