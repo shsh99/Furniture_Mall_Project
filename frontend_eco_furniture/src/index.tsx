@@ -3,15 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// React Router import
 import { BrowserRouter } from 'react-router-dom';
+// 공유 저장소 import
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  /* Provider : Redux 공유 저장소 추가*/
+  <Provider store={store}>
+  {/* BrowserRouter : React Router */}
+  <BrowserRouter> <App /> </BrowserRouter>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

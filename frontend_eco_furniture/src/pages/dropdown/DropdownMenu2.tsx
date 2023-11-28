@@ -33,8 +33,8 @@ function DropdownMenu() {
                 unmountOnExit
             >
                 <ul className='drop'>
-                    <li><a className="nav-link" href='/blog'>거실</a></li>
-                    <li><a className="nav-link" href='/blog'>침실</a></li>
+                    <li><a className="nav-link" href='/livingRoom'>거실</a></li>
+                    <li><a className="nav-link" href='/bedRoom'>침실</a></li>
                     <li></li>
                 </ul>
             </CSSTransition>

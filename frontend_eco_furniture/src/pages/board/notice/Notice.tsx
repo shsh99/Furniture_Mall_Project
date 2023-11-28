@@ -1,3 +1,4 @@
+// Notice.tsx
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
@@ -77,89 +78,120 @@ function Notice() {
 	return (
 		// TODO: JSX
 		<>
-			<>
-				{notice ? (
-					<div className="col-6 mx-auto">
-						<form>
-							<div className="row g-3 align-items-center mb-3">
-								<div className="col-3">
-									<label
-										htmlFor="noticeTitle"
-										className="col-form-label"
-									>
-										noticeTitle
-									</label>
-								</div>
+			<div className="hero">
+				<div className="container">
+					<div className="d-flex row justify-content-between">
+						<div className="col-lg-10">
+							<div className="mt-5">
+								<h1 className="bestt">공지사항 수정하기</h1>
 
-								<div className="col-9">
-									<input
-										type="text"
-										id="noticeTitle"
-										required
-										className="form-control"
-										value={notice.noticeTitle}
-										onChange={handleInputChange}
-										placeholder="noticeTitle"
-										name="noticeTitle"
-									/>
+								<div className="d-flex mt-5">
+									<h2>관리자용 페이지입니다.</h2>
 								</div>
 							</div>
-
-							<div className="row g-3 align-items-center mb-3">
-								<div className="col-3">
-									<label
-										htmlFor="noticeContents"
-										className="col-form-label"
-									>
-										noticeContents
-									</label>
-								</div>
-
-								<div className="col-9">
-									<input
-										type="text"
-										id="noticeContents"
-										required
-										className="form-control"
-										value={notice.noticeContents}
-										onChange={handleInputChange}
-										placeholder="noticeContents"
-										name="noticeContents"
-									/>
-								</div>
-							</div>
-						</form>
-
-						<div className="row g-3 mt-3 mb-3">
-							<button
-								onClick={deleteNotice}
-								className="btn btn-outline-danger ms-3 col"
-							>
-								Delete
-							</button>
-
-							<button
-								type="submit"
-								onClick={updateNotice}
-								className="btn btn-outline-success ms-2 col"
-							>
-								Update
-							</button>
 						</div>
+						<div className="product-section">
+							<div className="container">
+								<div className="row">
+									<>
+										{notice ? (
+											<div className="col-6 mx-auto">
+												<form>
+													<div className="row g-3 align-items-center mb-3">
+														<div className="col-3">
+															<label
+																htmlFor="noticeTitle"
+																className="col-form-label"
+															>
+																제목
+															</label>
+														</div>
 
-						{message && (
-							<p className="alert alert-success mt-3 text-center">
-								{message}
-							</p>
-						)}
+														<div className="col-9">
+															<input
+																type="text"
+																id="noticeTitle"
+																required
+																className="form-control"
+																value={
+																	notice.noticeTitle
+																}
+																onChange={
+																	handleInputChange
+																}
+																placeholder="공지 제목"
+																name="noticeTitle"
+															/>
+														</div>
+													</div>
+
+													<div className="row g-3 align-items-center mb-3">
+														<div className="col-3">
+															<label
+																htmlFor="noticeContents"
+																className="col-form-label"
+															>
+																내용
+															</label>
+														</div>
+
+														<div className="col-9">
+															<input
+																type="text"
+																id="noticeContents"
+																required
+																className="form-control"
+																value={
+																	notice.noticeContents
+																}
+																onChange={
+																	handleInputChange
+																}
+																placeholder="공지 내용"
+																name="noticeContents"
+															/>
+														</div>
+													</div>
+												</form>
+
+												<div className="row g-3 mt-3 mb-3">
+													<button
+														onClick={deleteNotice}
+														className="btn btn-outline-danger ms-3 col"
+													>
+														삭제
+													</button>
+
+													<button
+														type="submit"
+														onClick={updateNotice}
+														className="btn btn-outline-success ms-2 col"
+													>
+														수정
+													</button>
+												</div>
+
+												{message && (
+													<p className="alert alert-success mt-3 text-center">
+														{message}
+													</p>
+												)}
+											</div>
+										) : (
+											<div className="col-6 mx-auto">
+												<br />
+												<p>
+													Please click on a Notice...
+												</p>
+											</div>
+										)}
+									</>
+								</div>
+							</div>
+						</div>
 					</div>
-				) : (
-					<div className="col-6 mx-auto">
-						<br />
-						<p>Please click on a Notice...</p>
-					</div>
-				)}
-			</>
+				</div>
+			</div>
 		</>
 	);
 }

@@ -1,3 +1,4 @@
+// FaqList.tsx
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Pagination } from '@mui/material';
@@ -220,7 +221,7 @@ export default function FaqList() {
 														}
 													>
 														<span className="badge bg-success">
-															Edit
+															수정하기
 														</span>
 													</Link>
 												</div>

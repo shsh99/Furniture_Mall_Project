@@ -1,3 +1,4 @@
+// FooterCom.tsx
 import React, { useEffect } from 'react'
 import initCustom from '../../assets/js/custom';
 
