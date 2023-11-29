@@ -1,5 +1,4 @@
-﻿// TitleCom.tsx
-import React from "react";
+﻿import React from "react";
 
 function TitleCom(props:any) {
   return (

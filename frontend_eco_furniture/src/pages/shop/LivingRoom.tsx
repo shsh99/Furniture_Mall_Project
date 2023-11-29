@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface BlogEntry {
   image: string;
@@ -60,17 +61,17 @@ function LivingRoom() {
               <div className="col-12 col-sm-6 col-md-4 mb-5" key={index}>
                 <div className="post-entry">
                   {/* 클릭 시 모달 열기 */}
-                  <a href="#" onClick={(e) => handleImageClick(e, entry.image)}>
+                  <Link to="#" onClick={(e) => handleImageClick(e, entry.image)}>
                     <img
                       src={entry.image}
                       alt="Image"
                       className="img-fluid"
                       style={{ width: '600px', height: '300px' , borderRadius: '20px' }}
                     />
-                  </a>
+                  </Link>
                   <div className="post-content-entry">
                     <h3>
-                      <a href="#">{entry.title}</a>
+                      <Link to="#">{entry.title}</Link>
                     </h3>
                   </div>
                 </div>
@@ -103,7 +104,7 @@ function LivingRoom() {
               <div className="item mb-5 card" style={{ height: 'auto' }}>
 
                 <div className="position-relative" >
-                  <img className="img-fluid"  src="images/santa.jpg" alt="" />
+                  <img className="img-fluid"  src={require("../../assets/images/santa.jpg")} alt="" />
                 </div>
                 <div className="p-4">
                   <h3>제품명</h3>
@@ -117,7 +118,7 @@ function LivingRoom() {
               <div className="item mb-5 card" style={{ height: 'auto' }}>
 
                 <div className="position-relative">
-                  <img className="img-fluid" style={{ height: "" }} src="images/item1.jpg" alt="" />
+                  <img className="img-fluid" style={{ height: "" }} src={require("../../assets/images/item1.jpg")} alt="" />
                 </div>
                 <div className="p-4">
                   <h3>제품명</h3>
@@ -131,7 +132,7 @@ function LivingRoom() {
               <div className="item mb-5 card" style={{ height: 'auto' }}>
 
                 <div className="position-relative">
-                  <img className="img-fluid" style={{ height: "" }} src="images/item2.jpg" alt="" />
+                  <img className="img-fluid" style={{ height: "" }} src={require("../../assets/images/item2.jpg")} alt="" />
                 </div>
                 <div className="p-4">
                   <h3>제품명</h3>
@@ -145,7 +146,7 @@ function LivingRoom() {
               <div className="item mb-5 card" style={{ height: 'auto' }}>
 
                 <div className="position-relative">
-                  <img className="img-fluid" style={{}} src="images/ctree1.jpg" alt="" />
+                  <img className="img-fluid" style={{}} src={require("../../assets/images/ctree1.jpg")} alt="" />
                 </div>
                 <div className="p-4">
                   <h3>제품명</h3>
@@ -165,7 +166,7 @@ function LivingRoom() {
                      <div className="product-item-sm d-flex">
                         <div className="icon">
                            <img
-                              src="images/truck.svg"
+                              src={require("../../assets/images/truck.svg").default}
                               alt="Image"
                               className="imf-fluid"
                            />
@@ -184,7 +185,7 @@ function LivingRoom() {
                      <div className="product-item-sm d-flex">
                         <div className="icon">
                            <img
-                              src="images/bag.svg"
+                              src={require("../../assets/images/bag.svg").default}
                               alt="Image"
                               className="imf-fluid"
                            />
@@ -205,7 +206,7 @@ function LivingRoom() {
                      <div className="product-item-sm d-flex">
                         <div className="icon">
                            <img
-                              src="images/support.svg"
+                              src={require("../../assets/images/support.svg").default}
                               alt="Image"
                               className="imf-fluid"
                            />
@@ -224,7 +225,7 @@ function LivingRoom() {
                      <div className="product-item-sm d-flex">
                         <div className="icon">
                            <img
-                              src="images/return.svg"
+                              src={require("../../assets/images/return.svg").default}
                               alt="Image"
                               className="imf-fluid"
                            />

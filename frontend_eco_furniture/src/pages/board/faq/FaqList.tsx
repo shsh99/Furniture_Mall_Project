@@ -1,4 +1,3 @@
-// FaqList.tsx
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Pagination } from '@mui/material';
@@ -10,7 +9,7 @@ export default function FaqList() {
 	// TODO: 변수 정의
 	const [faq, setFaq] = useState<Array<IFaq>>([]);
 	// 검색어 변수
-	const [searchTitle, setSearchTitle] = useState<string>('');
+	const [searchTitle, setSearchTitle] = useState<string>("");
 
 	// 공통 변수 : page(현재페이지번호), count(총페이지건수), pageSize(3,6,9 배열)
 	const [page, setPage] = useState<number>(1);
@@ -82,12 +81,12 @@ export default function FaqList() {
 								</div>
 								<p>
 									<div className="input-group-append">
-										<a
-											href="/notice"
+										<Link
+											to="/notice"
 											className="btn btn-bl-outline mb-2"
 										>
 											공지사항 바로가기
-										</a>
+										</Link>
 									</div>
 								</p>
 								<h6>
@@ -101,7 +100,7 @@ export default function FaqList() {
 						<div className="col-lg-7">
 							<div className="hero-img-wrap">
 								<img
-									src="images/couch.png"
+									src={require("../../../assets/images/couch.png")}
 									className="img-fluid"
 								/>
 							</div>
@@ -134,12 +133,12 @@ export default function FaqList() {
 									>
 										검색하기
 									</button>
-									<a
-										href="/add-faq"
+									<Link
+										to="/add-faq"
 										className="btn btn-secondary"
 									>
 										글쓰기
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>

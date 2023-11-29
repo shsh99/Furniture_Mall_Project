@@ -1,5 +1,6 @@
 ﻿import React from "react";
 import "../../assets/css/login.css";
+import { Link } from "react-router-dom";
 
 function ForgotPassword() {
   return (
@@ -30,23 +31,23 @@ function ForgotPassword() {
                           placeholder="Enter Email Address..."
                         />
                       </div>
-                      <a
-                        href="/login"
+                      <Link
+                        to="/login"
                         className="btn btn-primary btn-user w-100 mb-3"
                       >
                         Reset Password
-                      </a>
+                      </Link>
                     </form>
                     <hr />
                     <div className="text-center">
-                      <a href="/register">
+                      <Link to="/register">
                         Create an Account!
-                      </a>
+                      </Link>
                     </div>
                     <div className="text-center">
-                      <a href="/login">
+                      <Link to="/login">
                         Already have an account? Login!
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

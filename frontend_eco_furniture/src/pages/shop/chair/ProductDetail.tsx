@@ -6,6 +6,7 @@ import { IoMdStar, IoMdStarOutline } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa6";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Like from "../Like";
+import { Link } from "react-router-dom";
 
 interface ProductDetailProps {
   product: {
@@ -294,9 +295,9 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
 
                                 {showSubMenu2 && (
                                   <ul style={{ marginTop: "0px" }}>
-                                    <a
+                                    <Link
                                       className="sub-side"
-                                      href="/blog"
+                                      to="/blog"
                                       style={{ textDecoration: "none", color: "inherit" }}
                                     >
                                       <p
@@ -326,7 +327,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                                       </div>
                                       <br/>
                                       
-                                    </a>
+                                    </Link>
                                   </ul>
                                 )}
                                 <hr style={{ marginLeft: "-50px" }} />
@@ -525,34 +526,34 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                       <div className="carousel-item active">
                         <div className="d-flex justify-content-between">
                           <div className="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                            <a className="product-item" href="cart.html">
+                            <Link className="product-item" to="/chair1">
                               <img
-                                src="images/의자1/의자1.png"
+                                src={require("../../../assets/images/chair1/chair1.png")}
                                 className="d-block w-100"
                               />
                               <h3 className="product-title">북유럽 의자</h3>
                               <strong className="product-price">$50.00</strong>
-                            </a>
+                            </Link>
                           </div>
                           <div className="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                            <a className="product-item" href="cart.html">
+                            <Link className="product-item" to="/chair1">
                               <img
-                                src="images/의자2/의자2.png"
+                                src={require("../../../assets/images/chair2/chair2.png")}
                                 className="d-block w-100"
                               />
                               <h3 className="product-title">에어로 의자</h3>
                               <strong className="product-price">$78.00</strong>
-                            </a>
+                            </Link>
                           </div>
                           <div className="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                            <a className="product-item" href="cart.html">
+                            <Link className="product-item" to="cart.html">
                               <img
-                                src="images/의자3/의자3.png"
+                                src={require("../../../assets/images/chair3/chair3.png")}
                                 className="d-block w-100"
                               />
                               <h3 className="product-title">인체공학적 의자</h3>
                               <strong className="product-price">$43.00</strong>
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -562,34 +563,34 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                       <div className="carousel-item">
                         <div className="d-flex justify-content-between">
                           <div className="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                            <a className="product-item" href="cart.html">
+                            <Link className="product-item" to="cart.html">
                               <img
-                                src="images/의자4/의자4.png"
+                                src={require("../../../assets/images/chair4/chair4.png")}
                                 className="d-block w-100"
                               />
                               <h3 className="product-title">에어로 의자</h3>
                               <strong className="product-price">$78.00</strong>
-                            </a>
+                            </Link>
                           </div>
                           <div className="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                            <a className="product-item" href="cart.html">
+                            <Link className="product-item" to="cart.html">
                               <img
-                                src="images/의자5/의자5.png"
+                                src={require("../../../assets/images/chair5/chair5.png")}
                                 className="d-block w-100"
                               />
                               <h3 className="product-title">인체공학적 의자</h3>
                               <strong className="product-price">$43.00</strong>
-                            </a>
+                            </Link>
                           </div>
                           <div className="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                            <a className="product-item" href="cart.html">
+                            <Link className="product-item" to="cart.html">
                               <img
-                                src="images/의자6/의자6.png"
+                                src={require("../../../assets/images/chair6/chair6.png")}
                                 className="d-block w-100"
                               />
                               <h3 className="product-title">북유럽 의자</h3>
                               <strong className="product-price">$50.00</strong>
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -599,34 +600,34 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                       <div className="carousel-item">
                         <div className="d-flex justify-content-between">
                           <div className="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                            <a className="product-item" href="cart.html">
+                            <Link className="product-item" to="cart.html">
                               <img
-                                src="images/의자3/의자3.png"
+                                src={require("../../../assets/images/chair3/chair3.png")}
                                 className="d-block w-100"
                               />
                               <h3 className="product-title">인체공학적 의자</h3>
                               <strong className="product-price">$43.00</strong>
-                            </a>
+                            </Link>
                           </div>
                           <div className="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                            <a className="product-item" href="cart.html">
+                            <Link className="product-item" to="cart.html">
                               <img
-                                src="images/의자1/의자1.png"
+                                src={require("../../../assets/images/chair3/chair3.png")}
                                 className="d-block w-100"
                               />
                               <h3 className="product-title">북유럽 의자</h3>
                               <strong className="product-price">$50.00</strong>
-                            </a>
+                            </Link>
                           </div>
                           <div className="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                            <a className="product-item" href="cart.html">
+                            <Link className="product-item" to="cart.html">
                               <img
-                                src="images/의자2/의자2.png"
+                                src={require("../../../assets/images/chair2/chair2.png")}
                                 className="d-block w-100"
                               />
                               <h3 className="product-title">에어로 의자</h3>
                               <strong className="product-price">$78.00</strong>
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -675,7 +676,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
             <div className="feature">
               <div className="icon">
                 <img
-                  src="images/truck.svg"
+                  src={require("../../../assets/images/truck.svg").default}
                   alt="Image"
                   className="imf-fluid"
                 />
@@ -692,7 +693,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
             <div className="feature">
               <div className="icon">
                 <img
-                  src="images/bag.svg"
+                  src={require("../../../assets/images/bag.svg").default}
                   alt="Image"
                   className="imf-fluid"
                 />
@@ -710,7 +711,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
             <div className="feature">
               <div className="icon">
                 <img
-                  src="images/support.svg"
+                  src={require("../../../assets/images/support.svg").default}
                   alt="Image"
                   className="imf-fluid"
                 />
@@ -727,7 +728,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
             <div className="feature">
               <div className="icon">
                 <img
-                  src="images/return.svg"
+                  src={require("../../../assets/images/return.svg").default}
                   alt="Image"
                   className="imf-fluid"
                 />
