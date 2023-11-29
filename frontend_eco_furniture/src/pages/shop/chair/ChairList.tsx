@@ -1,18 +1,19 @@
-// Chair.tsx : rfce
+// TableList.tsx : rfce
 // 상품 전체 조회 화면
 import React, { useEffect, useState } from "react";
 import { Pagination } from "@mui/material";
-import IShopItems from "../../../types/shop/chair/IProduct";
+import IShopItems from "../../../types/shop/chair/IShopItems";
 import itemImagesService from "../../../service/shop/itemImages/itemImagesService";
 
 
 import TitleCom from "../../../components/common/TitleCom";
+import { Link } from "react-router-dom";
 
 
 function ChairList() {
   // 변수 정의
   const [chair, setChair] = useState<Array<IShopItems>>([]);
-  // 검색어 변수  
+  // 검색어 변수
   const [searchTitle, setSearchTitle] = useState<string>("");
 
   // 공통 변수 : page(현재페이지번호), count(총페이지건수), pageSize(3,6,9 배열)
@@ -95,85 +96,85 @@ function ChairList() {
 
             {/* <!-- 의자 1 --> */}
             <div className="col-12 col-md-6 col-lg-4 mb-5">
-              <a className="product-item" href="/chair1">
-                <img src="images/의자1/의자1.png" className="img-fluid product-thumbnail" />
-                <h3 className="product-title">샤모니 암 체어</h3>
-                <strong className="product-price">₩ 150,000</strong>
+              <Link className="product-item" to="/chair1">
+                <img src={require("../../../assets/images/chair1/chair1.png")} className="img-fluid product-thumbnail" />
+                <h3 className="product-title">샤모니 암 체어(Black)</h3>
+                <strong className="product-price">$43.00</strong>
 
                 <span className="icon-cross">
-                  <img src="images/cross.svg" className="img-fluid" />
+                  <img src={require("../../../assets/images/cross.svg").default} className="img-fluid" />
                 </span>
-              </a>
+              </Link>
             </div>
             {/* <!-- 의자 1 --> */}
 
             {/* <!-- 의자 2 --> */}
             <div className="col-12 col-md-6 col-lg-4 mb-5">
-              <a className="product-item" href="/chair2">
-                <img src="images/의자2/의자2.png" className="img-fluid product-thumbnail" />
-                <h3 className="product-title">노바 암 체어</h3>
-                <strong className="product-price">₩ 137,000</strong>
+              <Link className="product-item" to="#">
+                <img src={require("../../../assets/images/chair2/chair2.png")} className="img-fluid product-thumbnail" />
+                <h3 className="product-title">Ergonomic Chair</h3>
+                <strong className="product-price">$43.00</strong>
 
                 <span className="icon-cross">
-                  <img src="images/cross.svg" className="img-fluid" />
+                  <img src={require("../../../assets/images/cross.svg").default} className="img-fluid" />
                 </span>
-              </a>
+              </Link>
             </div>
             {/* <!-- 의자 2 --> */}
 
             {/* <!-- 의자 3 --> */}
             <div className="col-12 col-md-6 col-lg-4 mb-5">
-              <a className="product-item" href="/chair3">
-                <img src="images/의자3/의자3.png" className="img-fluid product-thumbnail" />
-                <h3 className="product-title">엑세라 사이드 체어</h3>
-                <strong className="product-price">₩ 110,000</strong>
+              <Link className="product-item" to="#">
+                <img src={require("../../../assets/images/chair3/chair3.png")} className="img-fluid product-thumbnail" />
+                <h3 className="product-title">Ergonomic Chair</h3>
+                <strong className="product-price">$43.00</strong>
 
                 <span className="icon-cross">
-                  <img src="images/cross.svg" className="img-fluid" />
+                  <img src={require("../../../assets/images/cross.svg").default} className="img-fluid" />
                 </span>
-              </a>
+              </Link>
             </div>
             {/* <!-- 의자 3 --> */}
 
             {/* <!-- 의자 4 --> */}
             <div className="col-12 col-md-6 col-lg-4 mb-5">
-              <a className="product-item" href="#">
-                <img src="images/의자4/의자4.png" className="img-fluid product-thumbnail" />
-                <h3 className="product-title">토마스 체어</h3>
-                <strong className="product-price">₩ 143,000</strong>
+              <Link className="product-item" to="#">
+                <img src={require("../../../assets/images/chair4/chair4.png")} className="img-fluid product-thumbnail" />
+                <h3 className="product-title">Ergonomic Chair</h3>
+                <strong className="product-price">$43.00</strong>
 
                 <span className="icon-cross">
-                  <img src="images/cross.svg" className="img-fluid" />
+                  <img src={require("../../../assets/images/cross.svg").default} className="img-fluid" />
                 </span>
-              </a>
+              </Link>
             </div>
             {/* <!-- 의자 4 --> */}
 
             {/* <!-- 의자 5 --> */}
             <div className="col-12 col-md-6 col-lg-4 mb-5">
-              <a className="product-item" href="#">
-                <img src="images/의자5/의자5.png" className="img-fluid product-thumbnail" />
-                <h3 className="product-title">키키 체어</h3>
-                <strong className="product-price">₩ 120,000</strong>
+              <Link className="product-item" to="#">
+                <img src={require("../../../assets/images/chair5/chair5.png")} className="img-fluid product-thumbnail" />
+                <h3 className="product-title">Ergonomic Chair</h3>
+                <strong className="product-price">$43.00</strong>
 
                 <span className="icon-cross">
-                  <img src="images/cross.svg" className="img-fluid" />
+                  <img src={require("../../../assets/images/cross.svg").default} className="img-fluid" />
                 </span>
-              </a>
+              </Link>
             </div>
             {/* <!-- 의자 5 --> */}
 
             {/* <!-- 의자 6 --> */}
             <div className="col-12 col-md-6 col-lg-4 mb-5">
-              <a className="product-item" href="#">
-                <img src="images/의자6/의자6.png" className="img-fluid product-thumbnail" />
-                <h3 className="product-title">오페라 암 체어</h3>
-                <strong className="product-price">₩ 165,000</strong>
+              <Link className="product-item" to="#">
+                <img src={require("../../../assets/images/chair6/chair6.png")} className="img-fluid product-thumbnail" />
+                <h3 className="product-title">Ergonomic Chair</h3>
+                <strong className="product-price">$43.00</strong>
 
                 <span className="icon-cross">
-                  <img src="images/cross.svg" className="img-fluid" />
+                  <img src={require("../../../assets/images/cross.svg").default} className="img-fluid" />
                 </span>
-              </a>
+              </Link>
             </div>
             {/* <!-- 의자 6 --> */}
 
@@ -247,19 +248,19 @@ function ChairList() {
                 <div className="card-body">
                   <h5 className="card-title">{data.itemName}</h5>
                   <h5 className="card-title">₩ {data.itemName}</h5>
-                  <a
-                    href={`/simple-cart/${data.itemNo}`}
+                  <Link
+                    to={`/simple-cart/${data.itemNo}`}
                     className="btn btn-primary"
                   >
                     SimpleProduct Cart
-                  </a>
+                  </Link>
                   <br />
-                  <a
-                    href={`/simple-product/${data.itemNo}`}
+                  <Link
+                    to={`/simple-product/${data.itemNo}`}
                     className="btn btn-success mt-2"
                   >
                     SimpleProduct Detail(admin)
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

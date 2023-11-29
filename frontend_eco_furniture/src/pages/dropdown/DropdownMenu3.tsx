@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import './DropdownMenu.css';
+import { Link } from 'react-router-dom';
 
 function DropdownMenu() {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,9 +34,9 @@ function DropdownMenu() {
                 unmountOnExit
             >
                 <ul className='drop'>
-                    <li><a className="nav-link" href='/notice'>공지사항</a></li>
+                    <li><Link className="nav-link" to='/notice'>공지사항</Link></li>
                     {/* <li><a className="nav-link" href='#'>상품 문의</a></li> */}
-                    <li><a className="nav-link" href='/faq'>자주 묻는 질문</a></li>
+                    <li><Link className="nav-link" to='/faq'>자주 묻는 질문</Link></li>
                 </ul>
             </CSSTransition>
         </div>

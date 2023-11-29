@@ -51,7 +51,7 @@ import PaySuccess from './pages/shop/pay/PaySuccess';
 import PurchaseList from './pages/customer/myPage/PurchaseList';
 
 // Cansel
-import Cansel from './pages/customer/myPage/Cansel';
+import Cansel from './pages/customer/myPage/Cancel';
 
 // itemImageUpload
 import ItemImageListPage from './pages/shop/itemImages/ItemImagesListPage';
@@ -76,149 +76,149 @@ import CouponListPage from './pages/admin/coupon/CouponListPage';
 import MemberCouponListPage from './pages/admin/coupon/MemberCouponListPage';
 
 function App() {
-	return (
-		<div className="App">
-			<HeaderCom />
+   return (
+      <div className="App">
+         <HeaderCom />
 
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="*" element={<NotFound />} />
-				{/* <Route path="/search" element={<Search />} /> */}
-				<Route path="/service" element={<Service />} />
+         <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
+            {/* <Route path="/search" element={<Search />} /> */}
+            <Route path="/service" element={<Service />} />
 
-				{/* shop & item */}
-				<Route path="/shop" element={<Shop />} />
-				<Route path="/best-item" element={<BestItem />} />
-				<Route path="/promotion" element={<Promotion />} />
-				<Route path="/interior-item" element={<InteriorItem />} />
+            {/* shop & item */}
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/best-item" element={<BestItem />} />
+            <Route path="/promotion" element={<Promotion />} />
+            <Route path="/interior-item" element={<InteriorItem />} />
 
-				{/* 소파 */}
+            {/* 소파 */}
 
-				{/* 테이블 */}
-				<Route path="/table" element={<TableList />} />
+            {/* 테이블 */}
+            <Route path="/table" element={<TableList />} />
 
-				{/* 의자 */}
-				{/* <Route path="/chair" element={<Chair />} /> */}
-				<Route path="/chair" element={<ChairList />} />
+            {/* 의자 */}
+            {/* <Route path="/chair" element={<Chair />} /> */}
+            <Route path="/chair" element={<ChairList />} />
 
-				{/* 의자 상세조회 */}
-				<Route path="/chair1" element={<ProductChair1 />} />
-				{/* 우리가 쇼핑몰 */}
-				<Route path="/chair2" element={<SimpleProductList />} />
-				{/* 백연동 전체조회 */}
-				<Route path="/chair3" element={<ProductList />} />
+            {/* 의자 상세조회 */}
+            <Route path="/chair1" element={<ProductChair1 />} />
+            {/* 우리가 쇼핑몰 */}
+            <Route path="/chair2" element={<SimpleProductList />} />
+            {/* 백연동 전체조회 */}
+            <Route path="/chair3" element={<ProductList />} />
 
-				{/* 거실 */}
-				<Route path="/livingRoom" element={<LivingRoom />} />
+            {/* 거실 */}
+            <Route path="/livingRoom" element={<LivingRoom />} />
 
-				{/* 침실 */}
-				<Route path="/bedRoom" element={<BedRoom />} />
+            {/* 침실 */}
+            <Route path="/bedRoom" element={<BedRoom />} />
 
-				{/* 공간별 쇼핑 */}
-				<Route path="/blog" element={<Blog />} />
+            {/* 공간별 쇼핑 */}
+            <Route path="/blog" element={<Blog />} />
 
-				{/* 찜 & 장바구니 */}
+            {/* 찜 & 장바구니 */}
 
-				<Route path="/cart" element={<Cart />} />
-				<Route path="/like-page" element={<LikePage />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/like-page" element={<LikePage />} />
 
-				{/* 주문 & 결제 */}
-				<Route path="/checkOut" element={<CheckOut />} />
+            {/* 주문 & 결제 */}
+            <Route path="/checkOut" element={<CheckOut />} />
 
-				{/* 고객센터 */}
-				<Route path="/contact" element={<Contact />} />
-				<Route path="/about" element={<About />} />
+            {/* 고객센터 */}
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
 
-				{/* 자주 묻는 질문 */}
-				<Route path="/faq" element={<FaqList />} />
-				<Route path="/add-faq" element={<AddFaq />} />
-				<Route path="/faq/:faqNo" element={<Faq />} />
+            {/* 자주 묻는 질문 */}
+            <Route path="/faq" element={<FaqList />} />
+            <Route path="/add-faq" element={<AddFaq />} />
+            <Route path="/faq/:faqNo" element={<Faq />} />
 
-				{/* 공지사항 */}
-				<Route path="/notice" element={<NoticeList />} />
-				<Route path="/add-notice" element={<AddNotice />} />
-				<Route path="/notice/:noticeNo" element={<Notice />} />
+            {/* 공지사항 */}
+            <Route path="/notice" element={<NoticeList />} />
+            <Route path="/add-notice" element={<AddNotice />} />
+            <Route path="/notice/:noticeNo" element={<Notice />} />
 
-				{/* 로그인 */}
-				<Route path="/home" element={<Home />} />
-				<Route path="/login" element={<Login />} />
-				<Route path="/register" element={<Register />} />
-				<Route path="/forgot-password" element={<ForgotPassword />} />
-				
+            {/* 로그인 */}
+            <Route path="/home" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            
 
-				{/* itemImageUpload */}
-				<Route path="/item-images" element={<ItemImageListPage />} />
-				<Route
-					path="/add-item-images"
-					element={<AddItemImagesPage />}
-				/>
-				<Route path="/item-images/:uuid" element={<ItemImagesPage />} />
+            {/* itemImageUpload */}
+            <Route path="/item-images" element={<ItemImageListPage />} />
+            <Route
+               path="/add-item-images"
+               element={<AddItemImagesPage />}
+            />
+            <Route path="/item-images/:uuid" element={<ItemImagesPage />} />
 
-				{/* CodeCategory */}
-				<Route
-					path="/code-category"
-					element={<CodeCategoryListPage />}
-				/>
-				<Route
-					path="/add-code-category"
-					element={<AddCodeCategoryPage />}
-				/>
+            {/* CodeCategory */}
+            <Route
+               path="/code-category"
+               element={<CodeCategoryListPage />}
+            />
+            <Route
+               path="/add-code-category"
+               element={<AddCodeCategoryPage />}
+            />
 
-				{/* Code */}
-				<Route path="/code" element={<CodeListPage />} />
-				<Route path="/add-code" element={<AddCodePage />} />
-				<Route path="/code/:codeId" element={<CodePage />} />
+            {/* Code */}
+            <Route path="/code" element={<CodeListPage />} />
+            <Route path="/add-code" element={<AddCodePage />} />
+            <Route path="/code/:codeId" element={<CodePage />} />
 
-				<Route path="/blog" element={<Blog />} />
+            <Route path="/blog" element={<Blog />} />
 
-				{/* Payment */}
-				<Route path="/payment" element={<Payment />} />
-				<Route path="/paySuccess" element={<PaySuccess />} />
+            {/* Payment */}
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/paySuccess" element={<PaySuccess />} />
 
-				{/* PurchaseList */}
-				<Route path="/purchaselist" element={<PurchaseList />} />
+            {/* PurchaseList */}
+            <Route path="/purchaselist" element={<PurchaseList />} />
 
-				{/* Cansel */}
-				<Route path="/cansel" element={<Cansel />} />
+            {/* Cansel */}
+            <Route path="/cansel" element={<Cansel />} />
 
-				{/* itemImageUpload */}
-				<Route path="/item-images" element={<ItemImageListPage />} />
-				<Route
-					path="/add-item-images"
-					element={<AddItemImagesPage />}
-				/>
-				<Route path="/item-images/:uuid" element={<ItemImagesPage />} />
+            {/* itemImageUpload */}
+            <Route path="/item-images" element={<ItemImageListPage />} />
+            <Route
+               path="/add-item-images"
+               element={<AddItemImagesPage />}
+            />
+            <Route path="/item-images/:uuid" element={<ItemImagesPage />} />
 
-				{/* CodeCategory */}
-				<Route
-					path="/code-category"
-					element={<CodeCategoryListPage />}
-				/>
-				<Route
-					path="/add-code-category"
-					element={<AddCodeCategoryPage />}
-				/>
+            {/* CodeCategory */}
+            <Route
+               path="/code-category"
+               element={<CodeCategoryListPage />}
+            />
+            <Route
+               path="/add-code-category"
+               element={<AddCodeCategoryPage />}
+            />
 
-				{/* Code */}
-				<Route path="/code" element={<CodeListPage />} />
-				<Route path="/add-code" element={<AddCodePage />} />
-				<Route path="/code/:codeId" element={<CodePage />} />
+            {/* Code */}
+            <Route path="/code" element={<CodeListPage />} />
+            <Route path="/add-code" element={<AddCodePage />} />
+            <Route path="/code/:codeId" element={<CodePage />} />
 
-				{/* Coupon */}
-				<Route path="/coupon" element={<CouponListPage />} />
-				<Route path="/add-coupon" element={<AddCouponPage />} />
-				<Route path="/coupon/:couponId" element={<CouponPage />} />
+            {/* Coupon */}
+            <Route path="/coupon" element={<CouponListPage />} />
+            <Route path="/add-coupon" element={<AddCouponPage />} />
+            <Route path="/coupon/:couponId" element={<CouponPage />} />
 
-				{/* MemberCoupon */}
-				<Route
-					path="/member-coupon"
-					element={<MemberCouponListPage />}
-				/>
-			</Routes>
+            {/* MemberCoupon */}
+            <Route
+               path="/member-coupon"
+               element={<MemberCouponListPage />}
+            />
+         </Routes>
 
-			<FooterCom />
-		</div>
-	);
+         <FooterCom />
+      </div>
+   );
 }
 
 export default App;

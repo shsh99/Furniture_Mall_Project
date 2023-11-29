@@ -5,6 +5,7 @@ import TitleCom from "../../../components/common/TitleCom";
 import ISimpleProduct from "../../../types/shop/ISimpleProduct";
 import { Pagination } from "@mui/material";
 import SimpleProductService from "../../../service/shop/SimpleProductService";
+import { Link } from "react-router-dom";
 
 function SimpleProductList() {
   // 변수 정의
@@ -123,19 +124,19 @@ function SimpleProductList() {
                 <div className="card-body">
                   <h5 className="card-title">{data.title}</h5>
                   <h5 className="card-title">₩ {data.unitPrice}</h5>
-                  <a
-                    href={`/simple-cart/${data.spno}`}
+                  <Link
+                    to={`/simple-cart/${data.spno}`}
                     className="btn btn-primary"
                   >
                     SimpleProduct Cart
-                  </a>
+                  </Link>
                   <br />
-                  <a
-                    href={`/simple-product/${data.spno}`}
+                  <Link
+                    to={`/simple-product/${data.spno}`}
                     className="btn btn-success mt-2"
                   >
                     SimpleProduct Detail(admin)
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

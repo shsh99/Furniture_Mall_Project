@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import './DropdownMenu.css';
+import { Link } from 'react-router-dom';
 
 function DropdownMenu() {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,8 +34,8 @@ function DropdownMenu() {
                 unmountOnExit
             >
                 <ul className='drop'>
-                    <li><a className="nav-link" href='/livingRoom'>거실</a></li>
-                    <li><a className="nav-link" href='/bedRoom'>침실</a></li>
+                    <li><Link className="nav-link" to='/blog'>거실</Link></li>
+                    <li><Link className="nav-link" to='/blog'>침실</Link></li>
                     <li></li>
                 </ul>
             </CSSTransition>

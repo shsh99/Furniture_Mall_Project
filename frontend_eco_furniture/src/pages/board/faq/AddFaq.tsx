@@ -1,4 +1,3 @@
-// AddFaq.tsx
 import React from "react";
 import { useState } from "react";
 import IFaq from "../../../types/board/faq/IFaq";

@@ -1,10 +1,43 @@
 import React, { useEffect } from 'react'
 import initCustom from '../../../assets/js/custom';
+import { Link, useNavigate } from 'react-router-dom';
+import CartService from '../../../service/shop/cart/CartService';
+import { useState } from 'react';
+import ICart from '../../../types/shop/cart/ICart';
 
 function Cart() {
   useEffect(() => {
     initCustom();
   })
+
+  let navigate = useNavigate();
+
+  
+
+
+
+  const initialCart = {
+    
+    cartOrderAmount : "",
+    cartAllPrice : "",
+    email : "",
+    itemNo : ""
+
+  }
+
+  const [ cart, setCart ] = useState<ICart>(initialCart)
+
+  const deleteItem = () => {
+    CartService.remove(cart.itemNo, cart.email)
+    .then((response: any) => {
+      navigate("/cart");
+    })
+    .catch((e: Error) => {
+      console.log(e)
+    })
+  }
+
+
   return (
     <>
       {/* <!-- Start Hero Section --> */}
@@ -43,7 +76,7 @@ function Cart() {
                   <tbody>
                     <tr>
                       <td className="product-thumbnail">
-                        <img src="images/product-1.png" alt="Image" className="img-fluid" />
+                        <img src={require("../../../assets/images/product-1.png")} alt="Image" className="img-fluid" />
                       </td>
                       <td className="product-name">
                         <h2 className="h5 text-black">Product 1</h2>
@@ -56,18 +89,19 @@ function Cart() {
                           </div>
                           <input type="text" className="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" />
                           <div className="input-group-append">
-                            <button className="btn btn-outline-black increase" type="button">&plus;</button>
+                            <button className="btn btn-outline-black increase" type="button">&#43;</button>
                           </div>
                         </div>
 
                       </td>
                       <td>$49.00</td>
-                      <td><a href="#" className="btn btn-black btn-sm">X</a></td>
+                      <td><button
+                      onClick={deleteItem}>X</button></td>
                     </tr>
 
                     <tr>
                       <td className="product-thumbnail">
-                        <img src="images/product-2.png" alt="Image" className="img-fluid" />
+                        <img src={require("../../../assets/images/product-2.png")} alt="Image" className="img-fluid" />
                       </td>
                       <td className="product-name">
                         <h2 className="h5 text-black">Product 2</h2>
@@ -80,13 +114,13 @@ function Cart() {
                           </div>
                           <input type="text" className="form-control text-center quantity-amount" value={1} placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" />
                           <div className="input-group-append">
-                            <button className="btn btn-outline-black increase" type="button">&plus;</button>
+                            <button className="btn btn-outline-black increase" type="button">&#43;</button>
                           </div>
                         </div>
 
                       </td>
                       <td>$49.00</td>
-                      <td><a href="#" className="btn btn-black btn-sm">X</a></td>
+                      <td><button onClick={deleteItem} className="btn btn-black btn-sm">X</button></td>
                     </tr>
                   </tbody>
                 </table>
@@ -97,11 +131,11 @@ function Cart() {
           <div className="row">
             <div className="col-md-6">
               <div className="row mb-5">
-                <div className="col-md-6 mb-3 mb-md-0">
-                  <button className="btn btn-black btn-sm btn-block">Update Cart</button>
-                </div>
+                
                 <div className="col-md-6">
+                  <Link to="/">
                   <button className="btn btn-outline-black btn-sm btn-block">Continue Shopping</button>
+                  </Link>
                 </div>
               </div>
               <div className="row">
@@ -144,7 +178,9 @@ function Cart() {
 
                   <div className="row">
                     <div className="col-md-12">
-                      <button className="btn btn-black btn-lg py-3 btn-block" >Proceed To Checkout</button>
+                      <Link to="/payment">
+                      <button className="btn btn-black btn-lg py-3 btn-block" >Proceed To Payment</button>
+                      </Link>
                     </div>
                   </div>
                 </div>

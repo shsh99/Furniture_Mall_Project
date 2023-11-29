@@ -11,8 +11,6 @@ const appearFromRight = keyframes`
   }
 `;
 
-
-
 export const Container = styled.div`
 	height: 100%;
 `;
@@ -505,7 +503,7 @@ export const OpenSideBar = styled.header`
   75% {
     border-color : transparent #fff #fff #fff;
   }
-  100% {		
+  100% {
     border-color : #fff;
     transform : rotate (-680deg);
   }

@@ -9,13 +9,12 @@ const ProductChair1: React.FC = () => {
     name: '샤모니 암 체어',
     description: '의자, 플라스틱.',
     imageUrls: [
-      'images/의자1/의자1.png',
-      'images/의자1/의자1-1.jpg',
-      'images/의자1/의자1-2.jpg',
-      'images/의자1/의자1-3.jpg',
-      'images/의자1/의자1-4.jpg',
-      'images/의자1/의자1-5.jpg',
-      // 추가 이미지 URL 추가
+      require("../../../assets/images/chair1/chair1.png"),
+      require("../../../assets/images/chair1/chair1-1.jpg"),
+      require("../../../assets/images/chair1/chair1-2.jpg"),
+      require("../../../assets/images/chair1/chair1-3.jpg"),
+      require("../../../assets/images/chair1/chair1-4.jpg"),
+      require("../../../assets/images/chair1/chair1-5.jpg")
     ],
     price: '₩ 150,000',
     productReview: '★★★★☆',

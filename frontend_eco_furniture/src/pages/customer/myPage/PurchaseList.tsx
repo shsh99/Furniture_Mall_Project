@@ -56,7 +56,7 @@ function PurchaseList() {
                     <button type="button" className="mb-1 btn btn-primary mr-1">
                       상세 조회
                     </button>
-                    <Link to="/cansel">
+                    <Link to="/cancel">
                       <button
                         type="button"
                         className="mb-1 btn btn-primary mr-1"
@@ -104,7 +104,7 @@ function PurchaseList() {
                     <button type="button" className="mb-1 btn btn-primary mr-1">
                       상세 조회
                     </button>
-                    <Link to="/cansel">
+                    <Link to="/cancel">
                       <button
                         type="button"
                         className="mb-1 btn btn-primary mr-1"
@@ -152,7 +152,7 @@ function PurchaseList() {
                     <button type="button" className="mb-1 btn btn-primary mr-1">
                       상세 조회
                     </button>
-                    <Link to="/cansel">
+                    <Link to="/cancel">
                       <button
                         type="button"
                         className="mb-1 btn btn-primary mr-1"
