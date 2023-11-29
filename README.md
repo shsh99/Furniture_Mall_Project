@@ -1,6 +1,6 @@
 # Furniture_Mall_Project
 ![image](https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/e345ed1e-88a5-473d-8a52-389513e7d75a)
-
+ㅁ
 
 
 ## 가구 쇼핑몰 웹 개발 팀 프로젝트 
