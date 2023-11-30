@@ -1,74 +1,80 @@
 package com.project.ecofurniture.controller.admin.coupon;
 
+
 import com.project.ecofurniture.model.dto.admin.MemberCouponDto;
-
+import com.project.ecofurniture.model.entity.admin.coupon.MemberCoupon;
 import com.project.ecofurniture.service.admin.coupon.MemberCouponService;
-
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
-/**
- * packageName : com.project.ecofurniture.controller.admin.coupon
- * fileName : MemberCouponController
- * author : GB_Jo
- * date : 2023-11-23
- * description :
- * 요약 :
- * <p>
- * ===========================================
- */
 @RestController
 @Slf4j
-@RequestMapping("/api/admin")
+@RequestMapping("/api/coupon")
 public class MemberCouponController {
-
     @Autowired
     MemberCouponService memberCouponService;
 
     @GetMapping("/member-coupon")
-    public ResponseEntity<Object> findAllPage(
-            @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "3") int size
-    ) {
+    public ResponseEntity<Object> findAll() {
         try {
-//            페이지 변수 저장 (page:현재페이지번호, size:1페이지당개수)
-//            함수 매개변수 : Pageable (위의 값을 넣기)
-//        사용법 : Pageable pageable = PageRequest.of(현재페이지번호, 1페이지당개수);
-            Pageable pageable = PageRequest.of(page, size);
-
-            Page<MemberCouponDto> memberCouponDtoPage
-                    = memberCouponService.findAllPage(pageable);
-
-//          리액트 전송 : 배열 , 페이징정보 [자료구조 : Map<키이름, 값>]
-            Map<String, Object> response = new HashMap<>();
-            response.put("memberCoupon", memberCouponDtoPage.getContent()); // 조인배열
-            response.put("currentPage", memberCouponDtoPage.getNumber()); // 현재페이지번호
-            response.put("totalItems", memberCouponDtoPage.getTotalElements()); // 총건수(개수)
-            response.put("totalPages", memberCouponDtoPage.getTotalPages()); // 총페이지수
-
-            if (memberCouponDtoPage.isEmpty() == false) {
-//                성공
-                return new ResponseEntity<>(response, HttpStatus.OK);
+            List<MemberCoupon> list = memberCouponService.findAll();
+            if (list.isEmpty()== false) {
+                return new ResponseEntity<>(list, HttpStatus.OK);
             } else {
-//                데이터 없음
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+                return new ResponseEntity<>("No content", HttpStatus.NO_CONTENT);
             }
         } catch (Exception e) {
+            log.debug(e.getMessage());
+            return new ResponseEntity<>("Internal server error", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping("/member-coupon")
+    public ResponseEntity<Object> issueMemberCoupon(@RequestBody MemberCouponDto memberCouponDto) {
+        try {
+            // 클라이언트로부터 받은 데이터를 MemberCoupon 객체로 변환
+            MemberCoupon memberCoupon = new MemberCoupon();
+            memberCoupon.setUser(memberCouponDto.getUser());
+            memberCoupon.setCoupon(memberCouponDto.getCoupon());
+
+            // MemberCouponService의 save 메서드 호출
+            MemberCoupon memberCoupon2 = memberCouponService.save(memberCoupon);
+
+            // 성공
+            return new ResponseEntity<>(memberCoupon2, HttpStatus.CREATED);
+        } catch (Exception e) {
+
             log.debug(e.getMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @PostMapping("/save")
+    public ResponseEntity<MemberCoupon> saveMemberCoupon(@RequestBody MemberCoupon memberCoupon) {
+        try {
+            MemberCoupon savedCoupon = memberCouponService.save(memberCoupon);
+            return new ResponseEntity<>(savedCoupon, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<MemberCoupon> addMemberCoupon(@RequestParam String customerEmail, @RequestParam Integer couponId) {
+        try {
+            MemberCoupon addedCoupon = memberCouponService.addCoupon(customerEmail, couponId);
+            return new ResponseEntity<>(addedCoupon, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+
 
 }

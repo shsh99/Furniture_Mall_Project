@@ -1,55 +1,66 @@
 package com.project.ecofurniture.model.entity.auth;
 
 import com.project.ecofurniture.model.common.BaseTimeEntity;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.project.ecofurniture.model.entity.shop.like.Like;
+import lombok.*;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 
-/**
- * ======================================
- * FileName : User
- * Author : DH.Lee
- * Date : 2023-11-27
- * Note :
- * 1) 유저 엔티티 기본키 : email(로그인 id)
- * ======================================
- */
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
-@Table(name = "TB_USER")
+@Table(name="TB_USER")
+
 @Getter
 @Setter
+@ToString
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@DynamicInsert
+@DynamicUpdate
+// soft delete
+@Where(clause = "DELETE_YN = 'N'")
+@SQLDelete(sql = "UPDATE TB_USER SET DELETE_YN = 'Y', UPDATE_DATE=TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS') WHERE EMAIL = ?")
 public class User extends BaseTimeEntity {
-    // 속성 : TB_USER
+
     @Id
-    private String email; // 기본키
+    @Column(name = "EMAIL")
+    private String email;
 
-    private String password; // 암호
+    @Column(name = "NAME")
+    private String name;
 
-    private String username; // 유저명
+    @Column(name = "PASSWORD")
+    private String password;
 
-    private String codeName; // 권한코드명(속성) 속성 : ROLE_USER, ROLE_ADMIN
+    @Column(name = "PHONE")
+    private String phone;
 
-    private String birthday;
-
+    @Column(name = "GENDER")
     private String gender;
 
-    // 생성자 : 3개짜리(codeName 제외)
-    public User(String email, String password, String username, String birthday, String gender) {
+    @Column(name = "BIRTHDAY")
+    private String birthday;
 
-        this.email = email;
+    @Column(name = "ADDRESS")
+    private String address;
 
-        this.password = password;
+    @Column(name = "CODE_NAME")
+    private String codeName;
 
-        this.username = username;
+    @Column(name = "POINT")
+    private String point;
 
-        this.birthday = birthday;
 
-        this.gender = gender;
-    }
+
+    @OneToMany(mappedBy = "user")
+    private List<Like> likes = new ArrayList<>();
+
+
+
 }

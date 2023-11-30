@@ -1,5 +1,8 @@
 package com.project.ecofurniture.model.dto.admin;
 
+import com.project.ecofurniture.model.entity.admin.coupon.Coupon;
+import com.project.ecofurniture.model.entity.auth.User;
+
 /**
  * packageName : com.project.ecofurniture.model.dto.admin
  * fileName : MemberCouponDto
@@ -19,12 +22,9 @@ public interface MemberCouponDto {
 
     public String getIsUsed();
 
-    public String getCouponName();
+    public User getUser();
 
-    public Integer getDiscountValue();
+    public Coupon getCoupon();
 
-    public String getCouponEndTime();
-
-    public String getCustEmail();
 
 }

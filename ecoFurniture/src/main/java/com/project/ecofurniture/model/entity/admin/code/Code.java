@@ -32,6 +32,4 @@ public class Code {
     private String codeName;
     private Integer codeCategoryId; // 참조키
     private String useYn;
-
-    private String custRole; // TODO: 추가된 부분
 }
