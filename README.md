@@ -1,6 +1,6 @@
 # Furniture_Mall_Project
 ![image](https://github.com/shsh99/Furniture_Mall_Project/assets/134079624/e345ed1e-88a5-473d-8a52-389513e7d75a)
-ㅁ
+
 
 
 ## 가구 쇼핑몰 웹 개발 팀 프로젝트 
@@ -32,9 +32,12 @@
         <li>bootstrap : 5.0 </li>
         <li>HTML5 </li>
         <li>CSS3 </li>
-        <li>JavaScript :  </li>
-        <li>TypeScript :  </li>
-        <li>React :  </li>
+        <li>JavaScript </li>
+        <li>TypeScript </li>
+        <li>React </li>
+        <li>axios </li>
+        <li>nodeModules </li>
+        
        
     </ul>
 </details>
@@ -48,14 +51,15 @@
       <br>
       <ul>
           <li>springboot : 2.7.17  </li>
-          <li>SQL : </li>
+          <li>Oracle SQL : </li>
           <li>jdk : 11.0.20  </li>
           <li>java : 11  </li>
-<!--           <li>lombok </li>
-          <li>MyBatis </li> -->
-          <li>JSP </li>
-<!--           <li>BCrypt HASH </li>
-          <li>Apache Tomcat : 9.0 </li> -->
+          <li>lombok </li>
+          <li>Oracle DB </li> 
+          <li>JPA </li>
+          <li>lombok </li>
+          <li>javax </li>
+          
       </ul>
   </details>
   
@@ -67,13 +71,8 @@
       <summary>⚡️ API 자세히 살펴보기</summary>
       <br>
       <ul>
-<!--           <li>카카오 소셜 로그인 API (OAuth 2.0 프로토콜)</li>
-          <li>카카오페이 API</li>
-          <li>이메일 전송 API (네이버 SMTP 프로토콜)</li>
-          <li>구글 맵 API</li>
-          <li>CoolSMS API</li>
-          <li>DAUM 우편번호 찾기 API</li>
-          <li>국가 코드 OPEN API</li> -->
+          <li>카카오페이 API</li>  
+          <li>DAUM 우편번호 찾기 API</li>       
       </ul>
 </details>
 
@@ -83,14 +82,70 @@
 ### 🙌🏻 Collaboration
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=Jira&logoColor=white"/> <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=flat&logo=Slack&logoColor=white"/> <img src="https://img.shields.io/badge/Github-181717?style=flat&logo=Github&logoColor=white"/> <img src="https://img.shields.io/badge/SQL-4479A1?style=flat&logo=Notion&logoColor=white"/> <img 
 src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=Notion&logoColor=white"/> <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=Notion&logoColor=white"/>
-
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=Docker&logoColor=white"/>
+<img src="https://img.shields.io/badge/Google Cloud-4285F4?style=flat-square&logo=Google Cloud&logoColor=white"/>
+<img src="https://img.shields.io/badge/java-007396?style=flat-square&logo=java&logoColor=white"/>
+<img src="https://img.shields.io/badge/ORACLE-F80000?style=flat-square&logo=oracle&logoColor=white"/>
+<img src="https://img.shields.io/badge/Typescript-3178C6?style=flat-square&logo=Typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black"/>
 
 <br>
+
+## ⚙ 의존성
+implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+implementation 'javax.servlet:jstl'
+implementation 'org.springframework.boot:spring-boot-starter-aop'
+implementation 'org.springframework.boot:spring-boot-starter-validation'
+implementation 'org.springframework.boot:spring-boot-starter-web'
+implementation 'org.springframework.security:spring-security-crypto'
+compileOnly 'org.projectlombok:lombok'
+developmentOnly 'org.springframework.boot:spring-boot-devtools'
+implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.0'
+runtimeOnly 'com.mysql:mysql-connector-j'
+annotationProcessor 'org.projectlombok:lombok'
+testImplementation 'org.springframework.boot:spring-boot-starter-test'
+implementation 'org.springframework.boot:spring-boot-starter-mail'
+implementation 'org.springframework:spring-context-support'
+implementation group: 'net.nurigo', name: 'javaSDK', version: '2.2'
+implementation 'commons-io:commons-io:2.6'
+implementation 'com.google.code.gson:gson:2.8.6'
+implementation 'commons-fileupload:commons-fileupload:1.3.1'
+```
 
 ## 1️⃣ 프로젝트 구조
 
 <details>
-    <summary>⚡️ 구조 자세히 살펴보기</summary> 
+    <summary>⚡️ 구조 자세히 살펴보기</summary>
+ 📦src
+     ┗ 📂main
+       ┣ 📂java
+       ┃ ┗ 📂com
+       ┃   ┗ 📂project
+       ┃     ┗ 📂ecofurniture
+       ┃       ┃ ┣ 📂config
+       ┃       ┃ ┗ 📂controller
+       ┃       ┃  ┗ 📂admin
+       ┃       ┃ ┃  ┗ 📂code
+       ┃       ┃ ┃  ┗ 📂coupon
+       ┃       ┃ ┗ 📂auth
+       ┃       ┣ 📂dto
+       ┃       ┃ ┣ 📂kakao
+       ┃       ┃ ┣ 📂nation
+       ┃       ┃ ┣ 📂request
+       ┃       ┃ ┗ 📂response
+       ┃       ┣ 📂enums
+       ┃       ┣ 📂handler
+       ┃       ┃ ┗ 📂exception
+       ┃       ┣ 📂repository
+       ┃       ┃ ┣ 📂interfaces
+       ┃       ┃ ┗ 📂model
+       ┃       ┣ 📂service
+       ┃       ┗ 📂utils
+       ┣ 📂resources
+       ┃ ┣ 📂static
+       ┃ ┣ 📂templates
+   
+
 </details>
 
 <br>
