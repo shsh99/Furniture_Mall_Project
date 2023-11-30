@@ -12,57 +12,42 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * ======================================
- * FileName : CodeService
- * Author : DH.Lee
- * Date : 2023-11-27
- * Note :
- * 1)
- * ======================================
+ * packageName : com.project.ecofurniture.service.admin.code
+ * fileName : CodeService
+ * author : GB_Jo
+ * date : 2023-11-22
+ * description :
+ * 요약 :
+ * <p>
+ * ===========================================
  */
 @Service
 public class CodeService {
-    @Autowired
-    CodeRepository codeRepository; // DI
 
-    /**
-     * like 검색
-     */
-    public Page<CodeDto> selectByCodeNameContaining(String codeName, Pageable pageable) {
-        Page<CodeDto> page
-                = codeRepository.selectByCodeNameContaining(codeName, pageable);
+    @Autowired
+    CodeRepository codeRepository;
+
+    /** like 검색 + 페이징 */
+    public Page<CodeDto> selectByCodeNameContaining(String codeName, Pageable pageable){
+        Page<CodeDto> page = codeRepository.selectByCodeNameContaining(codeName,pageable);
         return page;
     }
 
-    /**
-     * 전체 검색 : 페이징 없음 + 조인
-     */
-    public List<CodeDto> selectAllNoPage() {
-        List<CodeDto> list = codeRepository.selectAllNoPage(); // 전체조회함수
+    /** 전체 검색 : 페이징 없음 */
+    public List<CodeDto> selectAllNoPage(){
+        List<CodeDto> list = codeRepository.selectAllNoPage(); // 전체조회 함수
         return list;
     }
 
-    /**
-     * 상세 조회
-     */
-    public Optional<Code> findById(int codeId) {
-        Optional<Code> optionalCode
-                = codeRepository.findById(codeId);
-        return optionalCode;
+    /** 상세 조회 */
+    public Optional<Code> findById(int codeId){
+        Optional<Code> optionalCodeDto = codeRepository.findById(codeId);
+        return optionalCodeDto;
     }
 
-    /**
-     * 저장 함수
-     */
-    public Code save(Code code) {
+    /** 저장 함수 */
+    public Code save(Code code){
         Code code2 = codeRepository.save(code);
         return code2; // DB 실제 저장된 객체
     }
-
-    /** TODO: 회원생성 사용, 권한이 있는지 확인하는 함수 */
-    public boolean existsByCodeName(String codeName) {
-        boolean bResult = codeRepository.existsByCodeName(codeName);
-        return bResult;
-    }
-
-} // end of class
+}

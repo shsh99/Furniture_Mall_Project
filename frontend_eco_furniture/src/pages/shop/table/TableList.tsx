@@ -7,6 +7,7 @@ import itemImagesService from "../../../service/shop/itemImages/itemImagesServic
 
 
 import TitleCom from "../../../components/common/TitleCom";
+import { Link } from "react-router-dom";
 
 
 function TableList() {
@@ -64,112 +65,96 @@ function TableList() {
     <>
       {/* 미리 세팅된 6개 의자 */}
       {/* <!-- Start Hero Section --> */}
-			<div className="hero">
-				<div className="container">
-					<div className="row justify-content-between">
-						<div className="col-lg-5">
-							<div className="intro-excerpt">
-								<h1>테이블</h1>
-							</div>
-						</div>
-						<div className="col-lg-7">
+         <div className="hero">
+            <div className="container">
+               <div className="row justify-content-between">
+                  <div className="col-lg-5">
+                     <div className="intro-excerpt">
+                        <h1>테이블</h1>
+                     </div>
+                  </div>
+                  <div className="col-lg-7">
 
-						</div>
-					</div>
-				</div>
-			</div>
-			{/* <!-- End Hero Section --> */}
+                  </div>
+               </div>
+            </div>
+         </div>
+         {/* <!-- End Hero Section --> */}
 
-			<div className="untree_co-section product-section before-footer-section">
-				<div className="container">
-					<div className="row">
+         <div className="untree_co-section product-section before-footer-section">
+            <div className="container">
+               <div className="row">
 
-						{/* <!-- 테이블 1 --> */}
+                  {/* <!-- 테이블 1 --> */}
 
-						<div className="col-12 col-md-6 col-lg-4 mb-5">
+                  <div className="col-12 col-md-6 col-lg-4 mb-5">
 
-							<a className="product-item" href="/table-1">
-								<img src="images/테이블1/테이블1.png" className="img-fluid product-thumbnail" />
-								<h3 className="product-title">살로몬 직사각 테이블</h3>
-								<strong className="product-price">₩ 210,000</strong>
+                     <Link to="" className="product-item" >
+                        <img src={require("../../../assets/images/table1/table1.png")} className="img-fluid product-thumbnail" />
+                        <h3 className="product-title">살로몬 직사각 테이블</h3>
+                        <strong className="product-price">₩ 210,000</strong>
 
-								<span className="icon-cross">
-									<img src="images/cross.svg" className="img-fluid" />
-								</span>
-							</a>
-						</div>
-						{/* <!-- 테이블 1 --> */}
+                     
+                     </Link>
+                  </div>
+                  {/* <!-- 테이블 1 --> */}
 
-						{/* <!-- 테이블 2 --> */}
-						<div className="col-12 col-md-6 col-lg-4 mb-5">
-							<a className="product-item" href="/table-2">
-								<img src="images/테이블2/테이블2.png" className="img-fluid product-thumbnail" />
-								<h3 className="product-title">트리오 더블 테이블</h3>
-								<strong className="product-price">₩ 320,000</strong>
+                  {/* <!-- 테이블 2 --> */}
+                  <div className="col-12 col-md-6 col-lg-4 mb-5">
+                     <Link to="" className="product-item" >
+                        <img src={require("../../../assets/images/table2/table2.png")} className="img-fluid product-thumbnail" />
+                        <h3 className="product-title">트리오 더블 테이블</h3>
+                        <strong className="product-price">₩ 320,000</strong>
 
-								<span className="icon-cross">
-									<img src="images/cross.svg" className="img-fluid" />
-								</span>
-							</a>
-						</div>
-						{/* <!-- 테이블 2 --> */}
+                     
+                     </Link>
+                  </div>
+                  {/* <!-- 테이블 2 --> */}
 
-						{/* <!-- 테이블 3 --> */}
-						<div className="col-12 col-md-6 col-lg-4 mb-5">
-							<a className="product-item" href="/table-3">
-								<img src="images/테이블3/테이블3.png" className="img-fluid product-thumbnail" />
-								<h3 className="product-title">코랄 리프 라운드 테이블</h3>
-								<strong className="product-price">₩ 120,000</strong>
+                  {/* <!-- 테이블 3 --> */}
+                  <div className="col-12 col-md-6 col-lg-4 mb-5">
+                     <Link to="" className="product-item" >
+                        <img src={require("../../../assets/images/table3/table3.png")} className="img-fluid product-thumbnail" />
+                        <h3 className="product-title">코랄 리프 라운드 테이블</h3>
+                        <strong className="product-price">₩ 120,000</strong>
 
-								<span className="icon-cross">
-									<img src="images/cross.svg" className="img-fluid" />
-								</span>
-							</a>
-						</div>
-						{/* <!-- 테이블 3 --> */}
+                     </Link>
+                  </div>
+                  {/* <!-- 테이블 3 --> */}
 
 
-						{/* <!-- 테이블 4 --> */}
-						<div className="col-12 col-md-6 col-lg-4 mb-5">
-							<a className="product-item" href="/table-4">
-								<img src="images/테이블4/테이블4.png" className="img-fluid product-thumbnail" />
-								<h3 className="product-title">오션 라운드 테이블</h3>
-								<strong className="product-price">₩ 160,000</strong>
+                  {/* <!-- 테이블 4 --> */}
+                  <div className="col-12 col-md-6 col-lg-4 mb-5">
+                     <Link to="" className="product-item">
+                        <img src={require("../../../assets/images/table4/table4.png")} className="img-fluid product-thumbnail" />
+                        <h3 className="product-title">오션 라운드 테이블</h3>
+                        <strong className="product-price">₩ 160,000</strong>
 
-								<span className="icon-cross">
-									<img src="images/cross.svg" className="img-fluid" />
-								</span>
-							</a>
-						</div>
-						{/* <!-- 테이블 4 --> */}
+                     </Link>
+                  </div>
+                  {/* <!-- 테이블 4 --> */}
 
-						{/* <!-- 테이블 5 --> */}
-						<div className="col-12 col-md-6 col-lg-4 mb-5">
-							<a className="product-item" href="/table-5">
-								<img src="images/테이블5/테이블5.png" className="img-fluid product-thumbnail" />
-								<h3 className="product-title">오션 사각 테이블</h3>
-								<strong className="product-price">₩ 140,000</strong>
+                  {/* <!-- 테이블 5 --> */}
+                  <div className="col-12 col-md-6 col-lg-4 mb-5">
+                     <Link to="" className="product-item" >
+                        <img src={require("../../../assets/images/table5/table5.png")} className="img-fluid product-thumbnail" />
+                        <h3 className="product-title">오션 사각 테이블</h3>
+                        <strong className="product-price">₩ 140,000</strong>
 
-								<span className="icon-cross">
-									<img src="images/cross.svg" className="img-fluid" />
-								</span>
-							</a>
-						</div>
-						{/* <!-- 테이블 5 --> */}
+                     </Link>
+                  </div>
+                  {/* <!-- 테이블 5 --> */}
 
-						{/* <!-- 테이블 6 --> */}
-						<div className="col-12 col-md-6 col-lg-4 mb-5">
-							<a className="product-item" href="/table-6">
-								<img src="images/테이블6/테이블6.png" className="img-fluid product-thumbnail" />
-								<h3 className="product-title">링스 사각 테이블</h3>
-								<strong className="product-price">₩ 165,000</strong>
+                  {/* <!-- 테이블 6 --> */}
+                  <div className="col-12 col-md-6 col-lg-4 mb-5">
+                     <Link to="" className="product-item" >
+                        <img src={require("../../../assets/images/table6/table6.png")} className="img-fluid product-thumbnail" />
+                        <h3 className="product-title">링스 사각 테이블</h3>
+                        <strong className="product-price">₩ 165,000</strong>
 
-								<span className="icon-cross">
-									<img src="images/cross.svg" className="img-fluid" />
-								</span>
-							</a>
-						</div>
-						{/* <!-- 테이블 6 --> */}
+                     </Link>
+                  </div>
+                  {/* <!-- 테이블 6 --> */}
 
           </div>
         </div>
@@ -241,19 +226,19 @@ function TableList() {
                 <div className="card-body">
                   <h5 className="card-title">{data.itemName}</h5>
                   <h5 className="card-title">₩ {data.itemName}</h5>
-                  <a
-                    href={`/simple-cart/${data.itemNo}`}
+                  <Link
+                    to={`/simple-cart/${data.itemNo}`}
                     className="btn btn-primary"
                   >
                     SimpleProduct Cart
-                  </a>
+                  </Link>
                   <br />
-                  <a
-                    href={`/simple-product/${data.itemNo}`}
+                  <Link
+                    to={`/simple-product/${data.itemNo}`}
                     className="btn btn-success mt-2"
                   >
                     SimpleProduct Detail(admin)
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

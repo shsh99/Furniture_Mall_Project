@@ -1,21 +1,13 @@
 package com.project.ecofurniture.model.entity.admin.coupon;
 
+
+import com.project.ecofurniture.model.entity.auth.User;
 import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 
-/**
- * packageName : com.project.ecofurniture.model.entity.admin.coupon
- * fileName : MemberCoupon
- * author : GB_Jo
- * date : 2023-11-23
- * description :
- * 요약 :
- * <p>
- * ===========================================
- */
 @Entity
 @Table(name="TB_MEMBER_COUPON")
 @SequenceGenerator(
@@ -33,16 +25,24 @@ import javax.persistence.*;
 @DynamicInsert
 @DynamicUpdate
 public class MemberCoupon {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE
             , generator = "TB_MEMBER_COUPON_SEQUENCE_GENERATOR"
     )
+    @Column(name = "M_COUPON_ID")
     private Integer mCouponId;
 
+    @Column(name = "IS_USED")
     private String isUsed;
 
-    private String CouponId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "COUPON_ID")
+    private Coupon coupon;
 
-    private String custEmail;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "EMAIL")
+    private User user;
+
 
 }
