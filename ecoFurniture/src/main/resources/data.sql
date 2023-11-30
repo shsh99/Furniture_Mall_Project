@@ -45,42 +45,42 @@ VALUES (30001, 'ROLE_USER', 'Y', 300);
 INSERT INTO TB_CODE
 VALUES (30002, 'ROLE_ADMIN', 'Y', 300);
 
--- 자주 묻는 질문(BOARD_FAQ)
-INSERT INTO TB_FAQ
-VALUES (TB_FAQ_SEQUENCE.nextval, '[주문/결제관련] 주문시 입력한 입금자명과 실제 입금자명이 다른데 어떻게 하나요?',
-        '주문시 등록하셨던 입금자명 상이할 경우 입금확인이 지연될 수 있습니다. 문의하기 또는 고객센터로 전화하여 입금자명 변경을 요청하여 주시기 바랍니다.',
-        TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
-
-INSERT INTO TB_FAQ
-VALUES (TB_FAQ_SEQUENCE.nextval, '[취소/교환/환불관리] 주문 내역 조회, 변경, 주문취소 방법은 어떻게 되나요?',
-        '구매한 제품이 마음에 들지 않거나 제품 하자가 발견되었다면 상품 수령 후 7일 이내 접수해 주셔야 교환/반품이 가능합니다.(단, 조건(조립 품목 등)에 맞지 않을 경우 교환 및 환불이 어려울 수 있습니다.).',
-        TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
-
-INSERT INTO TB_FAQ
-VALUES (TB_FAQ_SEQUENCE.nextval, '[취소/교환/환불관리] 교환환불 방법이 궁금해요.',
-        '구매한 제품이 마음에 들지 않거나 제품 하자가 발견되었다면 상품 수령 후 7일 이내 접수해 주셔야 교환/반품이 가능합니다.(단, 조건(조립 품목 등)에 맞지 않을 경우 교환 및 환불이 어려울 수 있습니다.).',
-        TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
-
-INSERT INTO TB_FAQ
-VALUES (TB_FAQ_SEQUENCE.nextval, '[배송관련] 배송기간은 얼마나 걸리나요?',
-        '택배 배송을 기본으로 하며, 제품의 특성에 따라 배송 방법이 변경 될 수 있습니다, 배솔 날짜는 제품 구매 확정 날짜로부터 출고 후 평균 1~3일이 소요됩니다. ※ 지역에 따라 배송기간이 상이할 수 있습니다.)',
-        TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
-
-INSERT INTO TB_FAQ
-VALUES (TB_FAQ_SEQUENCE.nextval, '[주문/결제관련] 주소를 변경할 수 있나요?',
-        '주소 변경을 원하신다면 가능한 한 빨리 고객지원센터로 문의해 주세요. 진행 상태에 따라 변경이 불가능 할 수 있음을 참고해주세요.',
-        TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
-
--- 공지사항(BOARD_NOTICE)
-INSERT INTO TB_NOTICE
-VALUES (TB_NOTICE_SEQUENCE.nextval, '쿠폰 발급 안내', '가입 시 15% 쿠폰 지급!, 생일 기념 20% 쿠폰 지급!',
-        TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
-
-INSERT INTO TB_NOTICE
-VALUES (TB_NOTICE_SEQUENCE.nextval, '에코퍼니쳐 9월 추석 배송 안내',
-        '2023년 9월 25(월) 오후 2시까지의 주문건은 추석 명절 전 배송, 이후 주문건은 2023년 10월 4일(수)부터 순차출고될 예정이오니 구매에 참고 부탁드리겠습니다. (제주, 도서산간 22일 오후2시까지 주문건 명절 전 수령)',
-        TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
-
+-- -- 자주 묻는 질문(BOARD_FAQ)
+-- INSERT INTO TB_FAQ
+-- VALUES (TB_FAQ_SEQUENCE.nextval, '[주문/결제관련] 주문시 입력한 입금자명과 실제 입금자명이 다른데 어떻게 하나요?',
+--         '주문시 등록하셨던 입금자명 상이할 경우 입금확인이 지연될 수 있습니다. 문의하기 또는 고객센터로 전화하여 입금자명 변경을 요청하여 주시기 바랍니다.',
+--         TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
+--
+-- INSERT INTO TB_FAQ
+-- VALUES (TB_FAQ_SEQUENCE.nextval, '[취소/교환/환불관리] 주문 내역 조회, 변경, 주문취소 방법은 어떻게 되나요?',
+--         '구매한 제품이 마음에 들지 않거나 제품 하자가 발견되었다면 상품 수령 후 7일 이내 접수해 주셔야 교환/반품이 가능합니다.(단, 조건(조립 품목 등)에 맞지 않을 경우 교환 및 환불이 어려울 수 있습니다.).',
+--         TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
+--
+-- INSERT INTO TB_FAQ
+-- VALUES (TB_FAQ_SEQUENCE.nextval, '[취소/교환/환불관리] 교환환불 방법이 궁금해요.',
+--         '구매한 제품이 마음에 들지 않거나 제품 하자가 발견되었다면 상품 수령 후 7일 이내 접수해 주셔야 교환/반품이 가능합니다.(단, 조건(조립 품목 등)에 맞지 않을 경우 교환 및 환불이 어려울 수 있습니다.).',
+--         TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
+--
+-- INSERT INTO TB_FAQ
+-- VALUES (TB_FAQ_SEQUENCE.nextval, '[배송관련] 배송기간은 얼마나 걸리나요?',
+--         '택배 배송을 기본으로 하며, 제품의 특성에 따라 배송 방법이 변경 될 수 있습니다, 배솔 날짜는 제품 구매 확정 날짜로부터 출고 후 평균 1~3일이 소요됩니다. ※ 지역에 따라 배송기간이 상이할 수 있습니다.)',
+--         TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
+--
+-- INSERT INTO TB_FAQ
+-- VALUES (TB_FAQ_SEQUENCE.nextval, '[주문/결제관련] 주소를 변경할 수 있나요?',
+--         '주소 변경을 원하신다면 가능한 한 빨리 고객지원센터로 문의해 주세요. 진행 상태에 따라 변경이 불가능 할 수 있음을 참고해주세요.',
+--         TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
+--
+-- -- 공지사항(BOARD_NOTICE)
+-- INSERT INTO TB_NOTICE
+-- VALUES (TB_NOTICE_SEQUENCE.nextval, '쿠폰 발급 안내', '가입 시 15% 쿠폰 지급!, 생일 기념 20% 쿠폰 지급!',
+--         TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
+--
+-- INSERT INTO TB_NOTICE
+-- VALUES (TB_NOTICE_SEQUENCE.nextval, '에코퍼니쳐 9월 추석 배송 안내',
+--         '2023년 9월 25(월) 오후 2시까지의 주문건은 추석 명절 전 배송, 이후 주문건은 2023년 10월 4일(수)부터 순차출고될 예정이오니 구매에 참고 부탁드리겠습니다. (제주, 도서산간 22일 오후2시까지 주문건 명절 전 수령)',
+--         TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'), NULL, 'N');
+--
 -- -- 문의게시판(BOARD_REPLY_BOARD)
 -- -- 1
 -- INSERT INTO TB_REPLY_BOARD
@@ -610,15 +610,6 @@ VALUES (TB_NOTICE_SEQUENCE.nextval, '에코퍼니쳐 9월 추석 배송 안내',
 -- VALUES (TB_LIKE_SEQUENCE.nextval, 5, 'VAYNE@NAVER.COM');
 --
 --
--- -- 포인트 변동내역
--- INSERT INTO TB_SHOP_POINT_HISTORIES
--- VALUES (TB_SHOP_POINT_HISTORIES_SEQUENCE.nextval, '적립', 5250, 'EZREAL@NAVER.COM');
---
--- INSERT INTO TB_SHOP_POINT_HISTORIES
--- VALUES (TB_SHOP_POINT_HISTORIES_SEQUENCE.nextval, '적립', 7750, 'VARUS@NAVER.COM');
---
--- INSERT INTO TB_SHOP_POINT_HISTORIES
--- VALUES (TB_SHOP_POINT_HISTORIES_SEQUENCE.nextval, '적립', 7900, 'VAYNE@NAVER.COM');
 
 
 COMMIT;

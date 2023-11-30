@@ -39,12 +39,18 @@ public class Coupon {
     @GeneratedValue(strategy = GenerationType.SEQUENCE
             , generator = "TB_COUPON_SEQUENCE_GENERATOR"
     )
+    @Column(name = "COUPON_ID")
     private Integer couponId;
 
+    @Column(name = "COUPON_NAME")
     private String couponName;
 
+    @Column(name = "DISCOUNT_VALUE")
     private Integer discountValue;
 
+    @Column(name = "COUPON_END_TIME")
     private String couponEndTime;
+
+
 
 }

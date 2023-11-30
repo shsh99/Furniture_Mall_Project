@@ -11,10 +11,10 @@ package com.project.ecofurniture.model.dto.admin;
  * ===========================================
  */
 public interface CodeDto {
-    //    getter 함수 정의
     public Integer getCodeId();
     public String getCodeName();
-    public Integer getCodeCategoryId();
-    public String getCodeCategoryName();
+    public Integer getCategoryId();
     public String getUseYn();
-} // end of interface
+    public String getCategoryName();
+
+}

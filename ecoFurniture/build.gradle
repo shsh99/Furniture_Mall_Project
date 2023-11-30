@@ -23,12 +23,12 @@ repositories {
 }
 
 dependencies {
-    //  todo: 보안 설정
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    //  todo: jwt 토큰 설정 라이브러리
-    implementation 'io.jsonwebtoken:jjwt:0.9.1'
-    //  todo: jwt 토큰 설정 라이브러리 : 보안
-    implementation "javax.xml.bind:jaxb-api"
+//    //  todo: 보안 설정
+//    implementation 'org.springframework.boot:spring-boot-starter-security'
+//    //  todo: jwt 토큰 설정 라이브러리
+//    implementation 'io.jsonwebtoken:jjwt:0.9.1'
+//    //  todo: jwt 토큰 설정 라이브러리 : 보안
+//    implementation "javax.xml.bind:jaxb-api"
     //    오라클 라이브러리( 19c )
     implementation 'com.oracle.database.jdbc:ucp:19.14.0.0'
     implementation 'com.oracle.database.security:oraclepki:19.14.0.0'

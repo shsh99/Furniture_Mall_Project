@@ -69,7 +69,7 @@ public class FaqController {
     public ResponseEntity<Object> create(@RequestBody Faq faq) {
         try {
             // TODO: log.debug(함수명()); 찍어서 에러 확인하기
-//            log.debug("Faq" + faq);
+            log.debug("Faq" + faq);
             Faq faq2 = faqService.save(faq);
             return new ResponseEntity<>(faq2, HttpStatus.OK);
         } catch (Exception e) {

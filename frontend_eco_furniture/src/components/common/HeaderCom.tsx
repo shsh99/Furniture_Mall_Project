@@ -71,7 +71,6 @@ function HeaderCom() {
           <div className="collapse navbar-collapse" id="navbarsFurni">
 
             <ul className="custom-navbar-nav navbar-nav ms-auto">
-{/* 질의 a 태그일 필요가 있는가 */}
               <li className="nav-item">
                 <a className="nav-link text-center">
                   <DropdownMenu />

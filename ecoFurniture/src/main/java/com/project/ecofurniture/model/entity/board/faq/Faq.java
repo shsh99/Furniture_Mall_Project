@@ -6,7 +6,6 @@ import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
-
 import javax.persistence.*;
 
 /**
@@ -18,6 +17,7 @@ import javax.persistence.*;
  * 1)
  * ======================================
  */
+
 @Entity
 @Table(name="TB_FAQ")
 @SequenceGenerator(
@@ -44,9 +44,7 @@ public class Faq extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE
             , generator = "TB_FAQ_SEQUENCE_GENERATOR"
     )
-    private Integer faqNo;      // FAQ 번호(기본키, 시퀀스)
-
+    private Integer faqNo; //   // FAQ 번호(기본키, 시퀀스)
     private String faqTitle;    // FAQ 제목
-
     private String faqContents; // FAQ 내용
 }
