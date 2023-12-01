@@ -229,6 +229,7 @@ implementation 'commons-fileupload:commons-fileupload:1.3.1'
 - 고객 정보 조회
 - 고객 정보 변경 (주소, 휴대폰 번호)
 - 비밀번호 변경
+- 회원탈퇴
 
 #### 포인트 조회
 - 포인트 전체 조회 (사용내역, 잔여 포인트)
@@ -243,6 +244,9 @@ implementation 'commons-fileupload:commons-fileupload:1.3.1'
 #### 찜 기능
 - 상품 상세조회에서 마음에 드는 상품 찜 기능
 
+#### 베스트 기능
+- 찜이 많은 순으로 베스트 아이템 등록
+
 #### 장바구니 기능
 - 장바구니 조회 기능
 - 찜 한 상품 장바구니 추가 기능
@@ -253,6 +257,11 @@ implementation 'commons-fileupload:commons-fileupload:1.3.1'
 #### 주문내역 조회
 
 #### 상품 문의
+- 상품문의 게시판 기능
+
+#### 상품평
+- 상품평 게시판 기능
+- 구매내역에 있는 상품에만 리뷰 가능 기능
 
 #### 결제 
 - 카카오 결제 api
